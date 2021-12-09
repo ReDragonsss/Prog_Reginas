@@ -46,6 +46,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="1avtosalon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1avtosalon.Designer.cs">
+      <DependentUpon>1avtosalon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="2avtosalon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="2avtosalon.Designer.cs">
+      <DependentUpon>2avtosalon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3avtosalon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3avtosalon.Designer.cs">
+      <DependentUpon>3avtosalon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4avtosalon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4avtosalon.Designer.cs">
+      <DependentUpon>4avtosalon.cs</DependentUpon>
+    </Compile>
     <Compile Include="main.cs">
       <SubType>Form</SubType>
     </Compile>
