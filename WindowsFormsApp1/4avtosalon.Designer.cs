@@ -39,7 +39,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(800, 438);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // _4avtosalon
             // 
@@ -49,7 +48,6 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "_4avtosalon";
             this.Text = "_4avtosalon";
-            this.Load += new System.EventHandler(this._4avtosalon_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

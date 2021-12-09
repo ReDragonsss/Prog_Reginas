@@ -15,42 +15,27 @@ namespace WindowsFormsApp1
         public main()
         {
             InitializeComponent();
-
         }
-            class comp
-            {
-                
-            }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            
-        }
-
         private void button1_Click(object sender, EventArgs e)//3автосалон
         {
             _1avtosalon Avtosalon = new _1avtosalon();
             Avtosalon.ShowDialog();
         }
-
         private void button4_Click(object sender, EventArgs e)// reginas
         {
             _4avtosalon Avtosalon = new _4avtosalon();
             Avtosalon.ShowDialog();
         }
-
         private void button5_Click(object sender, EventArgs e)//бдшка
         {
             Form2 form2 = new Form2();
             form2.ShowDialog();
         }
-
         private void button3_Click(object sender, EventArgs e)//2автосалон
         {
             _3avtosalon Avtosalon = new _3avtosalon();
             Avtosalon.ShowDialog();
         }
-
         private void button2_Click(object sender, EventArgs e)//3автосалон
         {
             _2avtosalon Avtosalon = new _2avtosalon();
