@@ -20,9 +20,10 @@ namespace WindowsFormsApp1
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            string windows = textBox1.Text;
-            string operativka = textBox2.Text;
-            string sql = $"INSERT INTO bd_kompykter (vers_wind, kolvo_operativ)  VALUES ('{windows}','{operativka}');";// запрос на дбавление параметров
+            string windows =(textBox1.Text);//попробывать сконверить в double или в float
+            byte operativka =Convert.ToByte(textBox2.Text);
+            //string sql = $"INSERT INTO bd_kompykter (vers_wind, kolvo_operativ)  VALUES ('{windows}','{operativka}');";// запрос на дбавление параметров
+            MessageBox.Show($"{windows},{operativka}");
             //try// правильность подключ
             //{
             //    connn.Open();
