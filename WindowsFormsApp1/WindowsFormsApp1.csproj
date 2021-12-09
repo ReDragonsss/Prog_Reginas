@@ -84,6 +84,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="1avtosalon.resx">
+      <DependentUpon>1avtosalon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="2avtosalon.resx">
+      <DependentUpon>2avtosalon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3avtosalon.resx">
+      <DependentUpon>3avtosalon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4avtosalon.resx">
+      <DependentUpon>4avtosalon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
