@@ -48,6 +48,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "_1avtosalon";
             this.Text = "_1avtosalon";
+            this.Load += new System.EventHandler(this._1avtosalon_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

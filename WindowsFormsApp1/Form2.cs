@@ -22,8 +22,10 @@ namespace WindowsFormsApp1
         {
             string windows =(textBox1.Text);//попробывать сконверить в double или в float
             byte operativka =Convert.ToByte(textBox2.Text);
-            //string sql = $"INSERT INTO bd_kompykter (vers_wind, kolvo_operativ)  VALUES ('{windows}','{operativka}');";// запрос на дбавление параметров
-            MessageBox.Show($"{windows},{operativka}");
+            ushort diagonal =Convert.ToUInt16(textBox1.Text);
+            string model = (textBox2.Text);
+            string sql = $"INSERT INTO bd_kompykter (vers_wind, kolvo_operativ)  VALUES ('{windows}','{operativka}')";// запрос на дбавление параметров
+            string sql2 = $"INSERT INTO bd_monitor (diagonal, model) VALUES ('{diagonal}','{model}')";
             //try// правильность подключ
             //{
             //    connn.Open();

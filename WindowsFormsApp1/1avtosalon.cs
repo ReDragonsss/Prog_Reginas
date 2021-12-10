@@ -16,5 +16,29 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+
+        private void _1avtosalon_Load(object sender, EventArgs e)
+        {
+            //vivod conn = new vivod();//создание конекта
+            //MySqlConnection connn = new MySqlConnection(conn.Connstring);// сторка подключения
+            //string sql = $"SELECT";// запрос в бд
+            //try// правильность подключ
+            //{
+            //    connn.Open();
+            //    MessageBox.Show("Подключение");
+            //    MySqlDataAdapter IDataAdapter = new MySqlDataAdapter(sql, connn);
+            //DataSet dataset = new DataSet();
+            //IDataAdapter.Fill(dataset);// заполнение датагрида
+            //    dataGridView1.DataSource = dataset.Tables[0];
+            //    connn.Close();
+            //}
+            //catch (Exception osh)
+            //{
+            //    MessageBox.Show("Произошла ошибка" + osh);
+            //    connn.Close();
+            //}
+        }
     }
 }
+
+
