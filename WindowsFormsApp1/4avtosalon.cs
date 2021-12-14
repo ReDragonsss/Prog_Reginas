@@ -16,5 +16,10 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+
+        private void _4avtosalon_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
