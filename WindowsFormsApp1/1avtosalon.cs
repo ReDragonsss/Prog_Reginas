@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace WindowsFormsApp1
 {
@@ -16,11 +17,11 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
-
+        MySqlConnection conn;
         private void _1avtosalon_Load(object sender, EventArgs e)
         {
-            //vivod conn = new vivod();//создание конекта
-            //MySqlConnection connn = new MySqlConnection(conn.Connstring);// сторка подключения
+            string connStr = "server=caseum.ru;port=33333;user=test_user;database=db_test;password=test_pass";
+            conn=new MySqlConnection(connStr);
             //string sql = $"SELECT";// запрос в бд
             //try// правильность подключ
             //{
@@ -82,6 +83,16 @@ namespace WindowsFormsApp1
         }
 
         private void dataGridView1_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
+        {
+
+        }
+
+        private void toolStripDropDownButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripComboBox1_Click(object sender, EventArgs e)
         {
 
         }

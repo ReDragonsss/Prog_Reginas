@@ -35,12 +35,13 @@
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel5 = new System.Windows.Forms.ToolStripLabel();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.поОчередиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.поДагоналиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.поОперативкеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.поЧемуНибутьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -63,7 +64,8 @@
             this.toolStripLabel2,
             this.toolStripLabel3,
             this.toolStripLabel5,
-            this.toolStripDropDownButton1});
+            this.toolStripDropDownButton1,
+            this.toolStripComboBox1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(802, 25);
@@ -109,6 +111,7 @@
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
             this.toolStripDropDownButton1.Size = new System.Drawing.Size(29, 22);
             this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.Click += new System.EventHandler(this.toolStripDropDownButton1_Click);
             // 
             // поОчередиToolStripMenuItem
             // 
@@ -133,6 +136,14 @@
             this.поЧемуНибутьToolStripMenuItem.Name = "поЧемуНибутьToolStripMenuItem";
             this.поЧемуНибутьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.поЧемуНибутьToolStripMenuItem.Text = "По чему нибуть";
+            // 
+            // toolStripComboBox1
+            // 
+            this.toolStripComboBox1.Items.AddRange(new object[] {
+            "Changan"});
+            this.toolStripComboBox1.Name = "toolStripComboBox1";
+            this.toolStripComboBox1.Size = new System.Drawing.Size(121, 25);
+            this.toolStripComboBox1.Click += new System.EventHandler(this.toolStripComboBox1_Click);
             // 
             // _1avtosalon
             // 
@@ -166,5 +177,6 @@
         private System.Windows.Forms.ToolStripMenuItem поДагоналиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem поОперативкеToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem поЧемуНибутьToolStripMenuItem;
+        private System.Windows.Forms.ToolStripComboBox toolStripComboBox1;
     }
 }
