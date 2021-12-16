@@ -128,11 +128,15 @@
             "Автоцентр1",
             "Автоцентр2",
             "Автоцентр3",
-            "Автоцентр4"});
+            "Автоцентр4",
+            "Автоцентр5",
+            "Автоцентр6"});
             this.comboBox1.Location = new System.Drawing.Point(165, 141);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(135, 21);
             this.comboBox1.TabIndex = 10;
+            this.comboBox1.Text = "Выбрать Автосалон";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // textBox5
             // 
@@ -152,20 +156,20 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(165, 168);
+            this.button2.Location = new System.Drawing.Point(437, 108);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(86, 23);
+            this.button2.Size = new System.Drawing.Size(164, 23);
             this.button2.TabIndex = 13;
-            this.button2.Text = "Подключение";
+            this.button2.Text = "Проверка подключения в БД";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(355, 6);
+            this.listBox1.Location = new System.Drawing.Point(257, 10);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(241, 173);
+            this.listBox1.Size = new System.Drawing.Size(344, 95);
             this.listBox1.TabIndex = 14;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
@@ -173,7 +177,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(608, 196);
+            this.ClientSize = new System.Drawing.Size(613, 196);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label5);

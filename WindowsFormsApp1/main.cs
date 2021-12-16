@@ -19,7 +19,7 @@ namespace WindowsFormsApp1
         private void button1_Click(object sender, EventArgs e)//3автосалон
         {
             _1avtosalon Avtosalon = new _1avtosalon();
-            Avtosalon.ShowDialog();
+            Avtosalon.Show();
         }
         private void button4_Click(object sender, EventArgs e)// reginas
         {
@@ -29,7 +29,7 @@ namespace WindowsFormsApp1
         private void button5_Click(object sender, EventArgs e)//бдшка
         {
             Form2 form2 = new Form2();
-            form2.ShowDialog();
+            form2.Show();
         }
         private void button3_Click(object sender, EventArgs e)//2автосалон
         {
