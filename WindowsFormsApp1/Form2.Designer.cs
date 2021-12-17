@@ -100,7 +100,6 @@
             this.label2.Size = new System.Drawing.Size(91, 13);
             this.label2.TabIndex = 7;
             this.label2.Text = "Версия Windows";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -110,7 +109,6 @@
             this.label3.Size = new System.Drawing.Size(63, 13);
             this.label3.TabIndex = 8;
             this.label3.Text = "Процессор";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 

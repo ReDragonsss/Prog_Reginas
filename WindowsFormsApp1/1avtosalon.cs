@@ -88,6 +88,7 @@ namespace WindowsFormsApp1
             id_selected_rows = dataGridView1.Rows[Convert.ToInt32(index_selected_rows)].Cells[0].Value.ToString();
             //Указываем ID выделенной строки в метке
             toolStripLabel2.Text = id_selected_rows;
+            //ControlData.ID_STUD = id_selected_rows;
         }
         public void GetListUsers()
         {
@@ -152,10 +153,19 @@ namespace WindowsFormsApp1
 
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
+            string pc = dataGridView1.SelectedCells[0].Value.ToString();
+            string wind = dataGridView1.SelectedCells[1].Value.ToString();
+            string cp = dataGridView1.SelectedCells[2].Value.ToString();
+            string oper = dataGridView1.SelectedCells[3].Value.ToString();
+            string new_id = id_selected_rows;
+            //refresh();
+        }
+        public void refresh(string pc, string wind, string cp, string oper, string new_id)
+        {
             // устанавливаем соединение с БД
             conn.Open();
             // запрос обновления данных
-            string update = $"UPDATE Comp1 SET windows='{}' WHERE (id='{}')";
+            string update = $"UPDATE Comp1 SET name_pc='{pc}',windows='{wind}', name_cp='{cp}', operativ_memory='{oper}' WHERE (id='{new_id}')";
             // объект для выполнения SQL-запроса
             MySqlCommand command = new MySqlCommand(update, conn);
             // выполняем запрос
@@ -163,7 +173,6 @@ namespace WindowsFormsApp1
             // закрываем подключение к БД
             conn.Close();
             //Обновляем DataGrid
-
         }
     }
 }
