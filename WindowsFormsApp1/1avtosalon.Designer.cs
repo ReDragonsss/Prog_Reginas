@@ -38,6 +38,7 @@
             this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -61,7 +62,8 @@
             this.toolStripLabel5,
             this.toolStripComboBox1,
             this.toolStripButton1,
-            this.toolStripButton2});
+            this.toolStripButton2,
+            this.toolStripButton3});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(802, 25);
@@ -71,14 +73,13 @@
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(86, 22);
-            this.toolStripLabel1.Text = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(142, 22);
+            this.toolStripLabel1.Text = "Выбранный компьютер:";
             // 
             // toolStripLabel2
             // 
             this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(86, 22);
-            this.toolStripLabel2.Text = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(0, 22);
             // 
             // toolStripLabel5
             // 
@@ -100,7 +101,7 @@
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton1.Text = "toolStripButton1";
+            this.toolStripButton1.Text = "Обновить";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // toolStripButton2
@@ -110,8 +111,18 @@
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton2.Text = "toolStripButton2";
+            this.toolStripButton2.Text = "Удалить";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton3.Text = "Изменить данные";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
             // contextMenuStrip1
             // 
@@ -147,5 +158,6 @@
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripButton toolStripButton3;
     }
 }

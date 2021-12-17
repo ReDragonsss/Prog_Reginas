@@ -109,6 +109,7 @@ namespace WindowsFormsApp1
             int count_rows = dataGridView1.RowCount - 1;
             toolStripLabel2.Text = (count_rows).ToString();
         }
+
         public void DeleteInfo()
         {
             string SqlDelete = "DELETE FROM Comp1 WHERE name_pc ='"+ id_selected_rows+"'"; //запрос на удаление
@@ -143,11 +144,26 @@ namespace WindowsFormsApp1
             if (!e.RowIndex.Equals(-1) && !e.ColumnIndex.Equals(-1) && e.Button.Equals(MouseButtons.Right))
             {
                 dataGridView1.CurrentCell = dataGridView1[e.ColumnIndex, e.RowIndex];
-                //dataGridView1.CurrentRow.Selected = true;
                 dataGridView1.CurrentCell.Selected = true;
                 //Метод получения ID выделенной строки в глобальную переменную
                 GetSelectedIDString();
             }
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            // устанавливаем соединение с БД
+            conn.Open();
+            // запрос обновления данных
+            string update = $"UPDATE Comp1 SET windows='{}' WHERE (id='{}')";
+            // объект для выполнения SQL-запроса
+            MySqlCommand command = new MySqlCommand(update, conn);
+            // выполняем запрос
+            command.ExecuteNonQuery();
+            // закрываем подключение к БД
+            conn.Close();
+            //Обновляем DataGrid
+
         }
     }
 }
