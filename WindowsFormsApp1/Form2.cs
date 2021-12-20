@@ -191,6 +191,7 @@ namespace WindowsFormsApp1
             conn=new MySqlConnection(connStr);
             GetListComp(listBox1);
         }
+
         private void button1_Click(object sender, EventArgs e)
         {
             string NamePc =textBox1.Text;
@@ -198,15 +199,15 @@ namespace WindowsFormsApp1
             string NameCp =textBox3.Text;
             string OperativMemory =textBox4.Text;
             string KodPc =textBox5.Text;
-            if (InsertComp(NamePc, Windows, NameCp, OperativMemory, KodPc) && comboBox1.SelectedIndex == 0) 
+            if (comboBox1.SelectedIndex == 0 && InsertComp(NamePc, Windows, NameCp, OperativMemory, KodPc))
             {
                 GetListComp(listBox1);
             }
-            else if (InsertComp(NamePc, Windows, NameCp, OperativMemory, KodPc) && comboBox1.SelectedIndex == 1)
+            else if (comboBox1.SelectedIndex == 1 && InsertComp(NamePc, Windows, NameCp, OperativMemory, KodPc))
             {
                 GetListComp(listBox1);
             }
-            else if (InsertComp(NamePc, Windows, NameCp, OperativMemory, KodPc) && comboBox1.SelectedIndex == 2)
+            else if (comboBox1.SelectedIndex == 2 && InsertComp(NamePc, Windows, NameCp, OperativMemory, KodPc))
             {
                 GetListComp(listBox1);
             }
