@@ -88,48 +88,232 @@ namespace WindowsFormsApp1
             id_selected_rows = dataGridView1.Rows[Convert.ToInt32(index_selected_rows)].Cells[0].Value.ToString();
             //Указываем ID выделенной строки в метке
             toolStripLabel2.Text = id_selected_rows;
-            //ControlData.ID_STUD = id_selected_rows;
+            ControlData.ID_STUD = id_selected_rows;
         }
         public void GetListUsers()
         {
-            //Запрос для вывода строк в БД
-            string commandStr = "SELECT name_pc, windows, name_cp, operativ_memory, kod_pc  FROM Comp1";
-            //Открываем соединение
-            conn.Open();
-            //Объявляем команду, которая выполнить запрос в соединении conn
-            MyDA.SelectCommand = new MySqlCommand(commandStr, conn);
-            //Заполняем таблицу записями из БД
-            MyDA.Fill(table);
-            //Указываем, что источником данных в bindingsource является заполненная выше таблица
-            bSource.DataSource = table;
-            //Указываем, что источником данных ДатаГрида является bindingsource 
-            dataGridView1.DataSource = bSource;
-            //Закрываем соединение
-            conn.Close();
-            //Отражаем количество записей в ДатаГриде
-            int count_rows = dataGridView1.RowCount - 1;
-            toolStripLabel2.Text = (count_rows).ToString();
+            if (toolStripComboBox1.SelectedIndex == 0)
+            {
+                //Запрос для вывода строк в БД
+                string commandStr = "SELECT name_pc, windows, name_cp, operativ_memory, kod_pc  FROM Comp1";
+                //Открываем соединение
+                conn.Open();
+                //Объявляем команду, которая выполнить запрос в соединении conn
+                MyDA.SelectCommand = new MySqlCommand(commandStr, conn);
+                //Заполняем таблицу записями из БД
+                MyDA.Fill(table);
+                //Указываем, что источником данных в bindingsource является заполненная выше таблица
+                bSource.DataSource = table;
+                //Указываем, что источником данных ДатаГрида является bindingsource 
+                dataGridView1.DataSource = bSource;
+                //Закрываем соединение
+                conn.Close();
+                //Отражаем количество записей в ДатаГриде
+                int count_rows = dataGridView1.RowCount - 1;
+                toolStripLabel2.Text = (count_rows).ToString();
+            }
+            else if (toolStripComboBox1.SelectedIndex == 1)
+            {
+                //Запрос для вывода строк в БД
+                string commandStr = "SELECT name_pc, windows, name_cp, operativ_memory, kod_pc  FROM Comp2";
+                //Открываем соединение
+                conn.Open();
+                //Объявляем команду, которая выполнить запрос в соединении conn
+                MyDA.SelectCommand = new MySqlCommand(commandStr, conn);
+                //Заполняем таблицу записями из БД
+                MyDA.Fill(table);
+                //Указываем, что источником данных в bindingsource является заполненная выше таблица
+                bSource.DataSource = table;
+                //Указываем, что источником данных ДатаГрида является bindingsource 
+                dataGridView1.DataSource = bSource;
+                //Закрываем соединение
+                conn.Close();
+                //Отражаем количество записей в ДатаГриде
+                int count_rows = dataGridView1.RowCount - 1;
+                toolStripLabel2.Text = (count_rows).ToString();
+            }
+            else if (toolStripComboBox1.SelectedIndex == 2)
+            {
+                //Запрос для вывода строк в БД
+                string commandStr = "SELECT name_pc, windows, name_cp, operativ_memory, kod_pc  FROM Comp3";
+                //Открываем соединение
+                conn.Open();
+                //Объявляем команду, которая выполнить запрос в соединении conn
+                MyDA.SelectCommand = new MySqlCommand(commandStr, conn);
+                //Заполняем таблицу записями из БД
+                MyDA.Fill(table);
+                //Указываем, что источником данных в bindingsource является заполненная выше таблица
+                bSource.DataSource = table;
+                //Указываем, что источником данных ДатаГрида является bindingsource 
+                dataGridView1.DataSource = bSource;
+                //Закрываем соединение
+                conn.Close();
+                //Отражаем количество записей в ДатаГриде
+                int count_rows = dataGridView1.RowCount - 1;
+                toolStripLabel2.Text = (count_rows).ToString();
+            }
+            else if (toolStripComboBox1.SelectedIndex == 3)
+            {
+                //Запрос для вывода строк в БД
+                string commandStr = "SELECT name_pc, windows, name_cp, operativ_memory, kod_pc  FROM Comp4";
+                //Открываем соединение
+                conn.Open();
+                //Объявляем команду, которая выполнить запрос в соединении conn
+                MyDA.SelectCommand = new MySqlCommand(commandStr, conn);
+                //Заполняем таблицу записями из БД
+                MyDA.Fill(table);
+                //Указываем, что источником данных в bindingsource является заполненная выше таблица
+                bSource.DataSource = table;
+                //Указываем, что источником данных ДатаГрида является bindingsource 
+                dataGridView1.DataSource = bSource;
+                //Закрываем соединение
+                conn.Close();
+                //Отражаем количество записей в ДатаГриде
+                int count_rows = dataGridView1.RowCount - 1;
+                toolStripLabel2.Text = (count_rows).ToString();
+            }
+            else
+            {
+                //Запрос для вывода строк в БД
+                string commandStr = "SELECT name_pc, windows, name_cp, operativ_memory, kod_pc  FROM Comp1";
+                //Открываем соединение
+                conn.Open();
+                //Объявляем команду, которая выполнить запрос в соединении conn
+                MyDA.SelectCommand = new MySqlCommand(commandStr, conn);
+                //Заполняем таблицу записями из БД
+                MyDA.Fill(table);
+                //Указываем, что источником данных в bindingsource является заполненная выше таблица
+                bSource.DataSource = table;
+                //Указываем, что источником данных ДатаГрида является bindingsource 
+                dataGridView1.DataSource = bSource;
+                //Закрываем соединение
+                conn.Close();
+                //Отражаем количество записей в ДатаГриде
+                int count_rows = dataGridView1.RowCount - 1;
+                toolStripLabel2.Text = (count_rows).ToString();
+
+            }
         }
 
-        public void DeleteInfo()
+        public bool DeleteInfo()
         {
-            string SqlDelete = "DELETE FROM Comp1 WHERE name_pc ='"+ id_selected_rows+"'"; //запрос на удаление
-            MySqlCommand delete= new MySqlCommand(SqlDelete, conn); // запрос на обновление данных
-            try
+            conn.Open();
+            int InsertCount = 0;
+            bool result = false;
+            if (toolStripComboBox1.SelectedIndex == 0)
             {
-                conn.Open();
-                delete.ExecuteNonQuery();
-                MessageBox.Show("Информация о компьютере удалена");
+                string SqlDelete = "DELETE FROM Comp1 WHERE name_pc ='"+ id_selected_rows+"'"; //запрос на удаление
+                try
+                {
+                    // объект для выполнения SQL-запроса
+                    MySqlCommand command = new MySqlCommand(SqlDelete, conn);
+                    // выполняем запрос
+                    InsertCount = command.ExecuteNonQuery();
+                    // закрываем подключение к БД
+                }
+                catch
+                {
+                    //Если возникла ошибка, то запрос не вставит ни одной строки
+                    InsertCount = 0;
+                }
+                finally
+                {
+                    //Но в любом случае, нужно закрыть соединение
+                    conn.Close();
+                    //Ессли количество вставленных строк было не 0, то есть вставлена хотя бы 1 строка
+                    if (InsertCount != 0)
+                    {
+                        MessageBox.Show($"Успешное обновление данных");
+                        reload_list();
+                    }
+                }
             }
-            catch(Exception osh)
+            else if (toolStripComboBox1.SelectedIndex == 1)
             {
-                MessageBox.Show("Удаление неуспешно ошибка:"+ osh); 
+                string SqlDelete = "DELETE FROM Comp2 WHERE name_pc ='"+ id_selected_rows+"'"; //запрос на удаление
+                try
+                {
+                    // объект для выполнения SQL-запроса
+                    MySqlCommand command = new MySqlCommand(SqlDelete, conn);
+                    // выполняем запрос
+                    InsertCount = command.ExecuteNonQuery();
+                    // закрываем подключение к БД
+                }
+                catch
+                {
+                    //Если возникла ошибка, то запрос не вставит ни одной строки
+                    InsertCount = 0;
+                }
+                finally
+                {
+                    //Но в любом случае, нужно закрыть соединение
+                    conn.Close();
+                    //Ессли количество вставленных строк было не 0, то есть вставлена хотя бы 1 строка
+                    if (InsertCount != 0)
+                    {
+                        MessageBox.Show($"Успешное обновление данных");
+                        reload_list();
+                    }
+                }
             }
-            finally
+            else if (toolStripComboBox1.SelectedIndex == 2)
             {
-                conn.Close();
-                reload_list();
+                string SqlDelete = "DELETE FROM Comp3 WHERE name_pc ='"+ id_selected_rows+"'"; //запрос на удаление
+                try
+                {
+                    // объект для выполнения SQL-запроса
+                    MySqlCommand command = new MySqlCommand(SqlDelete, conn);
+                    // выполняем запрос
+                    InsertCount = command.ExecuteNonQuery();
+                    // закрываем подключение к БД
+                }
+                catch(Exception osh)
+                {
+                    //Если возникла ошибка, то запрос не вставит ни одной строки
+                    InsertCount = 0;
+                    MessageBox.Show($"Возникла ошибка -->{osh}");
+                }
+                finally
+                {
+                    //Но в любом случае, нужно закрыть соединение
+                    conn.Close();
+                    //Ессли количество вставленных строк было не 0, то есть вставлена хотя бы 1 строка
+                    if (InsertCount != 0)
+                    {
+                        MessageBox.Show($"Успешное обновление данных");
+                        reload_list();
+                    }
+                }
             }
+            else if (toolStripComboBox1.SelectedIndex == 3)
+            {
+                string SqlDelete = "DELETE FROM Comp4 WHERE name_pc ='"+ id_selected_rows+"'"; //запрос на удаление
+                try
+                {
+                    // объект для выполнения SQL-запроса
+                    MySqlCommand command = new MySqlCommand(SqlDelete, conn);
+                    // выполняем запрос
+                    InsertCount = command.ExecuteNonQuery();
+                    // закрываем подключение к БД
+                }
+                catch
+                {
+                    //Если возникла ошибка, то запрос не вставит ни одной строки
+                    InsertCount = 0;
+                }
+                finally
+                {
+                    //Но в любом случае, нужно закрыть соединение
+                    conn.Close();
+                    //Ессли количество вставленных строк было не 0, то есть вставлена хотя бы 1 строка
+                    if (InsertCount != 0)
+                    {
+                        MessageBox.Show($"Успешное обновление данных");
+                        reload_list();
+                    }
+                }
+            }
+            return result;
         }
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
@@ -153,31 +337,19 @@ namespace WindowsFormsApp1
 
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
-            string pc = dataGridView1.SelectedCells[0].Value.ToString();
-            string wind = dataGridView1.SelectedCells[1].Value.ToString();
-            string cp = dataGridView1.SelectedCells[2].Value.ToString();
-            string oper = dataGridView1.SelectedCells[3].Value.ToString();
-            string new_id = id_selected_rows;
-            //refresh();
+            ControlData.ComboId=toolStripComboBox1.Text;
+            ControlData.ID_STUD = id_selected_rows;
+            Form1 form1 = new Form1();
+            form1.ShowDialog();
+            reload_list();
         }
-        public void refresh(string pc, string wind, string cp, string oper, string new_id)
+        private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            // устанавливаем соединение с БД
-            conn.Open();
-            // запрос обновления данных
-            string update = $"UPDATE Comp1 SET name_pc='{pc}',windows='{wind}', name_cp='{cp}', operativ_memory='{oper}' WHERE (id='{new_id}')";
-            // объект для выполнения SQL-запроса
-            MySqlCommand command = new MySqlCommand(update, conn);
-            // выполняем запрос
-            command.ExecuteNonQuery();
-            // закрываем подключение к БД
-            conn.Close();
-            //Обновляем DataGrid
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            ControlData.ComboId=toolStripComboBox1.Text;
+            ControlData.ID_STUD = id_selected_rows;
+            Form1 form1 = new Form1();
+            form1.ShowDialog();
+            reload_list();
         }
     }
 }
