@@ -253,6 +253,11 @@ namespace WindowsFormsApp1
             lb.Items.Add($"Имя Процессора: {NameCp}");
             lb.Items.Add($"Количество RAM: {OperativMemory}");
             lb.Items.Add($"Код компьютера: {KodPc}");
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox3.Clear();
+            textBox4.Clear();
+            textBox5.Clear();
         }
         MySqlConnection conn;
         private void Form2_Load(object sender, EventArgs e)
