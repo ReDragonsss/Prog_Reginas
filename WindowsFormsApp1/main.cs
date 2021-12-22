@@ -22,10 +22,16 @@ namespace WindowsFormsApp1
             Avtosalon.Show();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)// Запрос 
         {
             Form2 form2 = new Form2();
             form2.Show();
+        }
+
+        private void label1_DoubleClick(object sender, EventArgs e)
+        {
+            TechHelp techHelp = new TechHelp();
+            techHelp.Show();
         }
     }
 }

@@ -172,6 +172,106 @@ namespace WindowsFormsApp1
                 int count_rows = dataGridView1.RowCount - 1;
                 toolStripLabel2.Text = (count_rows).ToString();
             }
+            else if (toolStripComboBox1.SelectedIndex == 4)
+            {
+                //Запрос для вывода строк в БД
+                string commandStr = "SELECT name_pc, windows, name_cp, operativ_memory, kod_pc  FROM Comp5";
+                //Открываем соединение
+                conn.Open();
+                //Объявляем команду, которая выполнить запрос в соединении conn
+                MyDA.SelectCommand = new MySqlCommand(commandStr, conn);
+                //Заполняем таблицу записями из БД
+                MyDA.Fill(table);
+                //Указываем, что источником данных в bindingsource является заполненная выше таблица
+                bSource.DataSource = table;
+                //Указываем, что источником данных ДатаГрида является bindingsource 
+                dataGridView1.DataSource = bSource;
+                //Закрываем соединение
+                conn.Close();
+                //Отражаем количество записей в ДатаГриде
+                int count_rows = dataGridView1.RowCount - 1;
+                toolStripLabel2.Text = (count_rows).ToString();
+            }
+            else if (toolStripComboBox1.SelectedIndex == 5)
+            {
+                //Запрос для вывода строк в БД
+                string commandStr = "SELECT name_pc, windows, name_cp, operativ_memory, kod_pc  FROM Comp6";
+                //Открываем соединение
+                conn.Open();
+                //Объявляем команду, которая выполнить запрос в соединении conn
+                MyDA.SelectCommand = new MySqlCommand(commandStr, conn);
+                //Заполняем таблицу записями из БД
+                MyDA.Fill(table);
+                //Указываем, что источником данных в bindingsource является заполненная выше таблица
+                bSource.DataSource = table;
+                //Указываем, что источником данных ДатаГрида является bindingsource 
+                dataGridView1.DataSource = bSource;
+                //Закрываем соединение
+                conn.Close();
+                //Отражаем количество записей в ДатаГриде
+                int count_rows = dataGridView1.RowCount - 1;
+                toolStripLabel2.Text = (count_rows).ToString();
+            }
+            else if (toolStripComboBox1.SelectedIndex == 6)
+            {
+                //Запрос для вывода строк в БД
+                string commandStr = "SELECT name_pc, windows, name_cp, operativ_memory, kod_pc  FROM Comp7";
+                //Открываем соединение
+                conn.Open();
+                //Объявляем команду, которая выполнить запрос в соединении conn
+                MyDA.SelectCommand = new MySqlCommand(commandStr, conn);
+                //Заполняем таблицу записями из БД
+                MyDA.Fill(table);
+                //Указываем, что источником данных в bindingsource является заполненная выше таблица
+                bSource.DataSource = table;
+                //Указываем, что источником данных ДатаГрида является bindingsource 
+                dataGridView1.DataSource = bSource;
+                //Закрываем соединение
+                conn.Close();
+                //Отражаем количество записей в ДатаГриде
+                int count_rows = dataGridView1.RowCount - 1;
+                toolStripLabel2.Text = (count_rows).ToString();
+            }
+            else if (toolStripComboBox1.SelectedIndex == 7)
+            {
+                //Запрос для вывода строк в БД
+                string commandStr = "SELECT name_pc, windows, name_cp, operativ_memory, kod_pc  FROM Comp8";
+                //Открываем соединение
+                conn.Open();
+                //Объявляем команду, которая выполнить запрос в соединении conn
+                MyDA.SelectCommand = new MySqlCommand(commandStr, conn);
+                //Заполняем таблицу записями из БД
+                MyDA.Fill(table);
+                //Указываем, что источником данных в bindingsource является заполненная выше таблица
+                bSource.DataSource = table;
+                //Указываем, что источником данных ДатаГрида является bindingsource 
+                dataGridView1.DataSource = bSource;
+                //Закрываем соединение
+                conn.Close();
+                //Отражаем количество записей в ДатаГриде
+                int count_rows = dataGridView1.RowCount - 1;
+                toolStripLabel2.Text = (count_rows).ToString();
+            }
+            else if (toolStripComboBox1.SelectedIndex == 8)
+            {
+                //Запрос для вывода строк в БД
+                string commandStr = "SELECT name_pc, windows, name_cp, operativ_memory, kod_pc  FROM Comp9";
+                //Открываем соединение
+                conn.Open();
+                //Объявляем команду, которая выполнить запрос в соединении conn
+                MyDA.SelectCommand = new MySqlCommand(commandStr, conn);
+                //Заполняем таблицу записями из БД
+                MyDA.Fill(table);
+                //Указываем, что источником данных в bindingsource является заполненная выше таблица
+                bSource.DataSource = table;
+                //Указываем, что источником данных ДатаГрида является bindingsource 
+                dataGridView1.DataSource = bSource;
+                //Закрываем соединение
+                conn.Close();
+                //Отражаем количество записей в ДатаГриде
+                int count_rows = dataGridView1.RowCount - 1;
+                toolStripLabel2.Text = (count_rows).ToString();
+            }
             else
             {
                 //Запрос для вывода строк в БД
@@ -191,7 +291,6 @@ namespace WindowsFormsApp1
                 //Отражаем количество записей в ДатаГриде
                 int count_rows = dataGridView1.RowCount - 1;
                 toolStripLabel2.Text = (count_rows).ToString();
-
             }
         }
 
@@ -223,7 +322,7 @@ namespace WindowsFormsApp1
                     //Ессли количество вставленных строк было не 0, то есть вставлена хотя бы 1 строка
                     if (InsertCount != 0)
                     {
-                        MessageBox.Show($"Успешное обновление данных");
+                        MessageBox.Show($"Успешное удаление данных");
                         reload_list();
                     }
                 }
@@ -251,7 +350,7 @@ namespace WindowsFormsApp1
                     //Ессли количество вставленных строк было не 0, то есть вставлена хотя бы 1 строка
                     if (InsertCount != 0)
                     {
-                        MessageBox.Show($"Успешное обновление данных");
+                        MessageBox.Show($"Успешное удаление данных");
                         reload_list();
                     }
                 }
@@ -267,7 +366,7 @@ namespace WindowsFormsApp1
                     InsertCount = command.ExecuteNonQuery();
                     // закрываем подключение к БД
                 }
-                catch(Exception osh)
+                catch (Exception osh)
                 {
                     //Если возникла ошибка, то запрос не вставит ни одной строки
                     InsertCount = 0;
@@ -280,7 +379,7 @@ namespace WindowsFormsApp1
                     //Ессли количество вставленных строк было не 0, то есть вставлена хотя бы 1 строка
                     if (InsertCount != 0)
                     {
-                        MessageBox.Show($"Успешное обновление данных");
+                        MessageBox.Show($"Успешное удаление данных");
                         reload_list();
                     }
                 }
@@ -308,10 +407,154 @@ namespace WindowsFormsApp1
                     //Ессли количество вставленных строк было не 0, то есть вставлена хотя бы 1 строка
                     if (InsertCount != 0)
                     {
-                        MessageBox.Show($"Успешное обновление данных");
+                        MessageBox.Show($"Успешное удаление данных");
                         reload_list();
                     }
                 }
+            }
+            else if (toolStripComboBox1.SelectedIndex == 4)
+            {
+                string SqlDelete = "DELETE FROM Comp5 WHERE name_pc ='"+ id_selected_rows+"'"; //запрос на удаление
+                try
+                {
+                    // объект для выполнения SQL-запроса
+                    MySqlCommand command = new MySqlCommand(SqlDelete, conn);
+                    // выполняем запрос
+                    InsertCount = command.ExecuteNonQuery();
+                    // закрываем подключение к БД
+                }
+                catch
+                {
+                    //Если возникла ошибка, то запрос не вставит ни одной строки
+                    InsertCount = 0;
+                }
+                finally
+                {
+                    //Но в любом случае, нужно закрыть соединение
+                    conn.Close();
+                    //Ессли количество вставленных строк было не 0, то есть вставлена хотя бы 1 строка
+                    if (InsertCount != 0)
+                    {
+                        MessageBox.Show($"Успешное удаление данных");
+                        reload_list();
+                    }
+                }
+            }
+            else if (toolStripComboBox1.SelectedIndex == 5)
+            {
+                string SqlDelete = "DELETE FROM Comp6 WHERE name_pc ='"+ id_selected_rows+"'"; //запрос на удаление
+                try
+                {
+                    // объект для выполнения SQL-запроса
+                    MySqlCommand command = new MySqlCommand(SqlDelete, conn);
+                    // выполняем запрос
+                    InsertCount = command.ExecuteNonQuery();
+                    // закрываем подключение к БД
+                }
+                catch
+                {
+                    //Если возникла ошибка, то запрос не вставит ни одной строки
+                    InsertCount = 0;
+                }
+                finally
+                {
+                    //Но в любом случае, нужно закрыть соединение
+                    conn.Close();
+                    //Ессли количество вставленных строк было не 0, то есть вставлена хотя бы 1 строка
+                    if (InsertCount != 0)
+                    {
+                        MessageBox.Show($"Успешное удаление данных");
+                        reload_list();
+                    }
+                }
+            }
+            else if (toolStripComboBox1.SelectedIndex == 6)
+            {
+                string SqlDelete = "DELETE FROM Comp7 WHERE name_pc ='"+ id_selected_rows+"'"; //запрос на удаление
+                try
+                {
+                    // объект для выполнения SQL-запроса
+                    MySqlCommand command = new MySqlCommand(SqlDelete, conn);
+                    // выполняем запрос
+                    InsertCount = command.ExecuteNonQuery();
+                    // закрываем подключение к БД
+                }
+                catch
+                {
+                    //Если возникла ошибка, то запрос не вставит ни одной строки
+                    InsertCount = 0;
+                }
+                finally
+                {
+                    //Но в любом случае, нужно закрыть соединение
+                    conn.Close();
+                    //Ессли количество вставленных строк было не 0, то есть вставлена хотя бы 1 строка
+                    if (InsertCount != 0)
+                    {
+                        MessageBox.Show($"Успешное удаление данных");
+                        reload_list();
+                    }
+                }
+            }
+            else if (toolStripComboBox1.SelectedIndex == 7)
+            {
+                string SqlDelete = "DELETE FROM Comp8 WHERE name_pc ='"+ id_selected_rows+"'"; //запрос на удаление
+                try
+                {
+                    // объект для выполнения SQL-запроса
+                    MySqlCommand command = new MySqlCommand(SqlDelete, conn);
+                    // выполняем запрос
+                    InsertCount = command.ExecuteNonQuery();
+                    // закрываем подключение к БД
+                }
+                catch
+                {
+                    //Если возникла ошибка, то запрос не вставит ни одной строки
+                    InsertCount = 0;
+                }
+                finally
+                {
+                    //Но в любом случае, нужно закрыть соединение
+                    conn.Close();
+                    //Ессли количество вставленных строк было не 0, то есть вставлена хотя бы 1 строка
+                    if (InsertCount != 0)
+                    {
+                        MessageBox.Show($"Успешное удаление данных");
+                        reload_list();
+                    }
+                }
+            }
+            else if (toolStripComboBox1.SelectedIndex == 8)
+            {
+                string SqlDelete = "DELETE FROM Comp9 WHERE name_pc ='"+ id_selected_rows+"'"; //запрос на удаление
+                try
+                {
+                    // объект для выполнения SQL-запроса
+                    MySqlCommand command = new MySqlCommand(SqlDelete, conn);
+                    // выполняем запрос
+                    InsertCount = command.ExecuteNonQuery();
+                    // закрываем подключение к БД
+                }
+                catch
+                {
+                    //Если возникла ошибка, то запрос не вставит ни одной строки
+                    InsertCount = 0;
+                }
+                finally
+                {
+                    //Но в любом случае, нужно закрыть соединение
+                    conn.Close();
+                    //Ессли количество вставленных строк было не 0, то есть вставлена хотя бы 1 строка
+                    if (InsertCount != 0)
+                    {
+                        MessageBox.Show($"Успешное удаление данных");
+                        reload_list();
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Ошибка удаление. Возможно невыбран компьютер?");  
             }
             return result;
         }

@@ -167,6 +167,122 @@ namespace WindowsFormsApp1
                     }
                 }
             }
+            else if (comboBox1.SelectedIndex==5)
+            {
+                conn.Open();
+                string sql4 = $"INSERT INTO Comp6 (name_pc, windows, name_cp, operativ_memory, kod_pc) VALUES ('{namepc}', '{window}', '{namecp}', '{operativmemory}', '{kodpc}')";// запрос на дбавление параметров
+                try
+                {
+                    // объект для выполнения SQL-запроса
+                    MySqlCommand command = new MySqlCommand(sql4, conn);
+                    // выполняем запрос
+                    InsertCount = command.ExecuteNonQuery();
+                    // закрываем подключение к БД
+                }
+                catch
+                {
+                    //Если возникла ошибка, то запрос не вставит ни одной строки
+                    InsertCount = 0;
+                }
+                finally
+                {
+                    //Но в любом случае, нужно закрыть соединение
+                    conn.Close();
+                    //Ессли количество вставленных строк было не 0, то есть вставлена хотя бы 1 строка
+                    if (InsertCount !=0)
+                    {
+                        //то результат операции - истина
+                        result = true;
+                    }
+                }
+            }
+            else if (comboBox1.SelectedIndex==6)
+            {
+                conn.Open();
+                string sql4 = $"INSERT INTO Comp7 (name_pc, windows, name_cp, operativ_memory, kod_pc) VALUES ('{namepc}', '{window}', '{namecp}', '{operativmemory}', '{kodpc}')";// запрос на дбавление параметров
+                try
+                {
+                    // объект для выполнения SQL-запроса
+                    MySqlCommand command = new MySqlCommand(sql4, conn);
+                    // выполняем запрос
+                    InsertCount = command.ExecuteNonQuery();
+                    // закрываем подключение к БД
+                }
+                catch
+                {
+                    //Если возникла ошибка, то запрос не вставит ни одной строки
+                    InsertCount = 0;
+                }
+                finally
+                {
+                    //Но в любом случае, нужно закрыть соединение
+                    conn.Close();
+                    //Ессли количество вставленных строк было не 0, то есть вставлена хотя бы 1 строка
+                    if (InsertCount !=0)
+                    {
+                        //то результат операции - истина
+                        result = true;
+                    }
+                }
+            }
+            else if (comboBox1.SelectedIndex==7)
+            {
+                conn.Open();
+                string sql4 = $"INSERT INTO Comp8 (name_pc, windows, name_cp, operativ_memory, kod_pc) VALUES ('{namepc}', '{window}', '{namecp}', '{operativmemory}', '{kodpc}')";// запрос на дбавление параметров
+                try
+                {
+                    // объект для выполнения SQL-запроса
+                    MySqlCommand command = new MySqlCommand(sql4, conn);
+                    // выполняем запрос
+                    InsertCount = command.ExecuteNonQuery();
+                    // закрываем подключение к БД
+                }
+                catch
+                {
+                    //Если возникла ошибка, то запрос не вставит ни одной строки
+                    InsertCount = 0;
+                }
+                finally
+                {
+                    //Но в любом случае, нужно закрыть соединение
+                    conn.Close();
+                    //Ессли количество вставленных строк было не 0, то есть вставлена хотя бы 1 строка
+                    if (InsertCount !=0)
+                    {
+                        //то результат операции - истина
+                        result = true;
+                    }
+                }
+            }
+            else if (comboBox1.SelectedIndex==8)
+            {
+                conn.Open();
+                string sql4 = $"INSERT INTO Comp9 (name_pc, windows, name_cp, operativ_memory, kod_pc) VALUES ('{namepc}', '{window}', '{namecp}', '{operativmemory}', '{kodpc}')";// запрос на дбавление параметров
+                try
+                {
+                    // объект для выполнения SQL-запроса
+                    MySqlCommand command = new MySqlCommand(sql4, conn);
+                    // выполняем запрос
+                    InsertCount = command.ExecuteNonQuery();
+                    // закрываем подключение к БД
+                }
+                catch
+                {
+                    //Если возникла ошибка, то запрос не вставит ни одной строки
+                    InsertCount = 0;
+                }
+                finally
+                {
+                    //Но в любом случае, нужно закрыть соединение
+                    conn.Close();
+                    //Ессли количество вставленных строк было не 0, то есть вставлена хотя бы 1 строка
+                    if (InsertCount !=0)
+                    {
+                        //то результат операции - истина
+                        result = true;
+                    }
+                }
+            }
             return result;
         }
         public void GetListComp(ListBox lb)
@@ -211,11 +327,27 @@ namespace WindowsFormsApp1
             {
                 GetListComp(listBox1);
             }
-            else if (InsertComp(NamePc, Windows, NameCp, OperativMemory, KodPc) && comboBox1.SelectedIndex == 3)
+            else if (comboBox1.SelectedIndex == 3 && InsertComp(NamePc, Windows, NameCp, OperativMemory, KodPc))
             {
                 GetListComp(listBox1);
             }
-            else if (InsertComp(NamePc, Windows, NameCp, OperativMemory, KodPc) && comboBox1.SelectedIndex == 4)
+            else if (comboBox1.SelectedIndex == 4 && InsertComp(NamePc, Windows, NameCp, OperativMemory, KodPc))
+            {
+                GetListComp(listBox1);
+            }
+            else if (comboBox1.SelectedIndex == 5 && InsertComp(NamePc, Windows, NameCp, OperativMemory, KodPc))
+            {
+                GetListComp(listBox1);
+            }
+            else if (comboBox1.SelectedIndex == 6 && InsertComp(NamePc, Windows, NameCp, OperativMemory, KodPc))
+            {
+                GetListComp(listBox1);
+            }
+            else if (comboBox1.SelectedIndex == 7 && InsertComp(NamePc, Windows, NameCp, OperativMemory, KodPc))
+            {
+                GetListComp(listBox1);
+            }
+            else if (comboBox1.SelectedIndex == 8 && InsertComp(NamePc, Windows, NameCp, OperativMemory, KodPc))
             {
                 GetListComp(listBox1);
             }
@@ -226,16 +358,6 @@ namespace WindowsFormsApp1
 
             }
         }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             {

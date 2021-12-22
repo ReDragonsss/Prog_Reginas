@@ -123,12 +123,15 @@
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "Автоцентр1",
-            "Автоцентр2",
-            "Автоцентр3",
-            "Автоцентр4",
-            "Автоцентр5",
-            "Автоцентр6"});
+            "Changan",
+            "Kia",
+            "Naval",
+            "Shkoda",
+            "Nissan",
+            "Mitsubishi",
+            "Subaru",
+            "Geely",
+            "Peugeot"});
             this.comboBox1.Location = new System.Drawing.Point(165, 141);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(135, 21);
@@ -189,7 +192,7 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Name = "Form2";
-            this.Text = "Form2";
+            this.Text = "Занесение в БД";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
