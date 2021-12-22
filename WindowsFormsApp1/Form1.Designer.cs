@@ -67,9 +67,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(34, 228);
+            this.button1.Location = new System.Drawing.Point(34, 163);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(189, 23);
+            this.button1.Size = new System.Drawing.Size(189, 25);
             this.button1.TabIndex = 4;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
@@ -83,7 +83,6 @@
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 5;
             this.label1.Text = "label1";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -93,13 +92,12 @@
             this.label2.Size = new System.Drawing.Size(102, 13);
             this.label2.TabIndex = 6;
             this.label2.Text = "Выбранный салон:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(256, 259);
+            this.ClientSize = new System.Drawing.Size(256, 206);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);

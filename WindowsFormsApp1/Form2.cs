@@ -242,7 +242,7 @@ namespace WindowsFormsApp1
                 try//проверка на правильность данных
                 {
                     conn.Open();
-                    MessageBox.Show("Подключение");
+                    MessageBox.Show("База данных работает стабильно");
                     conn.Close();
 
                 }

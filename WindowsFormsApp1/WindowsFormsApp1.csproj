@@ -55,24 +55,6 @@
     <Compile Include="1avtosalon.Designer.cs">
       <DependentUpon>1avtosalon.cs</DependentUpon>
     </Compile>
-    <Compile Include="2avtosalon.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="2avtosalon.Designer.cs">
-      <DependentUpon>2avtosalon.cs</DependentUpon>
-    </Compile>
-    <Compile Include="3avtosalon.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="3avtosalon.Designer.cs">
-      <DependentUpon>3avtosalon.cs</DependentUpon>
-    </Compile>
-    <Compile Include="4avtosalon.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="4avtosalon.Designer.cs">
-      <DependentUpon>4avtosalon.cs</DependentUpon>
-    </Compile>
     <Compile Include="ConDat.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -96,15 +78,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="1avtosalon.resx">
       <DependentUpon>1avtosalon.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="2avtosalon.resx">
-      <DependentUpon>2avtosalon.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="3avtosalon.resx">
-      <DependentUpon>3avtosalon.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="4avtosalon.resx">
-      <DependentUpon>4avtosalon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConDat.resx">
       <DependentUpon>ConDat.cs</DependentUpon>
