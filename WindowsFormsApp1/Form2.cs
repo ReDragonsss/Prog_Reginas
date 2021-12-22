@@ -25,14 +25,11 @@ namespace WindowsFormsApp1
             if (comboBox1.SelectedIndex==0)
             {
                 conn.Open();
-                string sql = $"INSERT INTO Comp1 (name_pc, windows, name_cp, operativ_memory, kod_pc) VALUES ('{namepc}', '{window}', '{namecp}', '{operativmemory}', '{kodpc}')";// запрос на дбавление параметров
+                string sql = $"INSERT INTO Comp1 (name_pc, windows, name_cp, operativ_memory, kod_pc) VALUES ('{namepc}', '{window}', '{namecp}', '{operativmemory}', '{kodpc}')";
                 try
                 {
-                    // объект для выполнения SQL-запроса
                     MySqlCommand command = new MySqlCommand(sql, conn);
-                    // выполняем запрос
                     InsertCount = command.ExecuteNonQuery();
-                    // закрываем подключение к БД
                 }
                 catch
                 {
@@ -41,12 +38,10 @@ namespace WindowsFormsApp1
                 }
                 finally
                 {
-                    //Но в любом случае, нужно закрыть соединение
                     conn.Close();
                     //Ессли количество вставленных строк было не 0, то есть вставлена хотя бы 1 строка
                     if (InsertCount !=0)
                     {
-                        //то результат операции - истина
                         result = true;
                     }
                 }
@@ -54,14 +49,11 @@ namespace WindowsFormsApp1
             else if (comboBox1.SelectedIndex==1)
             {
                 conn.Open();
-                string sql1 = $"INSERT INTO Comp2 (name_pc, windows, name_cp, operativ_memory, kod_pc) VALUES ('{namepc}', '{window}', '{namecp}', '{operativmemory}', '{kodpc}')";// запрос на дбавление параметров
+                string sql1 = $"INSERT INTO Comp2 (name_pc, windows, name_cp, operativ_memory, kod_pc) VALUES ('{namepc}', '{window}', '{namecp}', '{operativmemory}', '{kodpc}')";
                 try
                 {
-                    // объект для выполнения SQL-запроса
                     MySqlCommand command = new MySqlCommand(sql1, conn);
-                    // выполняем запрос
                     InsertCount = command.ExecuteNonQuery();
-                    // закрываем подключение к БД
                 }
                 catch
                 {
@@ -70,12 +62,10 @@ namespace WindowsFormsApp1
                 }
                 finally
                 {
-                    //Но в любом случае, нужно закрыть соединение
                     conn.Close();
                     //Ессли количество вставленных строк было не 0, то есть вставлена хотя бы 1 строка
                     if (InsertCount !=0)
                     {
-                        //то результат операции - истина
                         result = true;
                     }
                 }
@@ -83,14 +73,11 @@ namespace WindowsFormsApp1
             else if (comboBox1.SelectedIndex==2)
             {
                 conn.Open();
-                string sql2 = $"INSERT INTO Comp3 (name_pc, windows, name_cp, operativ_memory, kod_pc) VALUES ('{namepc}', '{window}', '{namecp}', '{operativmemory}', '{kodpc}')";// запрос на дбавление параметров
+                string sql2 = $"INSERT INTO Comp3 (name_pc, windows, name_cp, operativ_memory, kod_pc) VALUES ('{namepc}', '{window}', '{namecp}', '{operativmemory}', '{kodpc}')";
                 try
                 {
-                    // объект для выполнения SQL-запроса
                     MySqlCommand command = new MySqlCommand(sql2, conn);
-                    // выполняем запрос
                     InsertCount = command.ExecuteNonQuery();
-                    // закрываем подключение к БД
                 }
                 catch
                 {
@@ -99,12 +86,10 @@ namespace WindowsFormsApp1
                 }
                 finally
                 {
-                    //Но в любом случае, нужно закрыть соединение
                     conn.Close();
                     //Ессли количество вставленных строк было не 0, то есть вставлена хотя бы 1 строка
                     if (InsertCount !=0)
                     {
-                        //то результат операции - истина
                         result = true;
                     }
                 }
@@ -112,14 +97,11 @@ namespace WindowsFormsApp1
             else if (comboBox1.SelectedIndex==3)
             {
                 conn.Open();
-                string sql3 = $"INSERT INTO Comp4 (name_pc, windows, name_cp, operativ_memory, kod_pc) VALUES ('{namepc}', '{window}', '{namecp}', '{operativmemory}', '{kodpc}')";// запрос на дбавление параметров
+                string sql3 = $"INSERT INTO Comp4 (name_pc, windows, name_cp, operativ_memory, kod_pc) VALUES ('{namepc}', '{window}', '{namecp}', '{operativmemory}', '{kodpc}')";
                 try
                 {
-                    // объект для выполнения SQL-запроса
                     MySqlCommand command = new MySqlCommand(sql3, conn);
-                    // выполняем запрос
                     InsertCount = command.ExecuteNonQuery();
-                    // закрываем подключение к БД
                 }
                 catch
                 {
@@ -128,12 +110,10 @@ namespace WindowsFormsApp1
                 }
                 finally
                 {
-                    //Но в любом случае, нужно закрыть соединение
                     conn.Close();
                     //Ессли количество вставленных строк было не 0, то есть вставлена хотя бы 1 строка
                     if (InsertCount !=0)
                     {
-                        //то результат операции - истина
                         result = true;
                     }
                 }
@@ -141,14 +121,11 @@ namespace WindowsFormsApp1
             else if (comboBox1.SelectedIndex==4)
             {
                 conn.Open();
-                string sql4 = $"INSERT INTO Comp5 (name_pc, windows, name_cp, operativ_memory, kod_pc) VALUES ('{namepc}', '{window}', '{namecp}', '{operativmemory}', '{kodpc}')";// запрос на дбавление параметров
+                string sql4 = $"INSERT INTO Comp5 (name_pc, windows, name_cp, operativ_memory, kod_pc) VALUES ('{namepc}', '{window}', '{namecp}', '{operativmemory}', '{kodpc}')";
                 try
                 {
-                    // объект для выполнения SQL-запроса
                     MySqlCommand command = new MySqlCommand(sql4, conn);
-                    // выполняем запрос
                     InsertCount = command.ExecuteNonQuery();
-                    // закрываем подключение к БД
                 }
                 catch
                 {
@@ -157,12 +134,10 @@ namespace WindowsFormsApp1
                 }
                 finally
                 {
-                    //Но в любом случае, нужно закрыть соединение
                     conn.Close();
                     //Ессли количество вставленных строк было не 0, то есть вставлена хотя бы 1 строка
                     if (InsertCount !=0)
                     {
-                        //то результат операции - истина
                         result = true;
                     }
                 }
@@ -170,14 +145,11 @@ namespace WindowsFormsApp1
             else if (comboBox1.SelectedIndex==5)
             {
                 conn.Open();
-                string sql4 = $"INSERT INTO Comp6 (name_pc, windows, name_cp, operativ_memory, kod_pc) VALUES ('{namepc}', '{window}', '{namecp}', '{operativmemory}', '{kodpc}')";// запрос на дбавление параметров
+                string sql4 = $"INSERT INTO Comp6 (name_pc, windows, name_cp, operativ_memory, kod_pc) VALUES ('{namepc}', '{window}', '{namecp}', '{operativmemory}', '{kodpc}')";
                 try
                 {
-                    // объект для выполнения SQL-запроса
                     MySqlCommand command = new MySqlCommand(sql4, conn);
-                    // выполняем запрос
                     InsertCount = command.ExecuteNonQuery();
-                    // закрываем подключение к БД
                 }
                 catch
                 {
@@ -186,12 +158,10 @@ namespace WindowsFormsApp1
                 }
                 finally
                 {
-                    //Но в любом случае, нужно закрыть соединение
                     conn.Close();
                     //Ессли количество вставленных строк было не 0, то есть вставлена хотя бы 1 строка
                     if (InsertCount !=0)
                     {
-                        //то результат операции - истина
                         result = true;
                     }
                 }
@@ -199,14 +169,11 @@ namespace WindowsFormsApp1
             else if (comboBox1.SelectedIndex==6)
             {
                 conn.Open();
-                string sql4 = $"INSERT INTO Comp7 (name_pc, windows, name_cp, operativ_memory, kod_pc) VALUES ('{namepc}', '{window}', '{namecp}', '{operativmemory}', '{kodpc}')";// запрос на дбавление параметров
+                string sql4 = $"INSERT INTO Comp7 (name_pc, windows, name_cp, operativ_memory, kod_pc) VALUES ('{namepc}', '{window}', '{namecp}', '{operativmemory}', '{kodpc}')";
                 try
                 {
-                    // объект для выполнения SQL-запроса
                     MySqlCommand command = new MySqlCommand(sql4, conn);
-                    // выполняем запрос
                     InsertCount = command.ExecuteNonQuery();
-                    // закрываем подключение к БД
                 }
                 catch
                 {
@@ -215,12 +182,10 @@ namespace WindowsFormsApp1
                 }
                 finally
                 {
-                    //Но в любом случае, нужно закрыть соединение
                     conn.Close();
                     //Ессли количество вставленных строк было не 0, то есть вставлена хотя бы 1 строка
                     if (InsertCount !=0)
                     {
-                        //то результат операции - истина
                         result = true;
                     }
                 }
@@ -228,14 +193,11 @@ namespace WindowsFormsApp1
             else if (comboBox1.SelectedIndex==7)
             {
                 conn.Open();
-                string sql4 = $"INSERT INTO Comp8 (name_pc, windows, name_cp, operativ_memory, kod_pc) VALUES ('{namepc}', '{window}', '{namecp}', '{operativmemory}', '{kodpc}')";// запрос на дбавление параметров
+                string sql4 = $"INSERT INTO Comp8 (name_pc, windows, name_cp, operativ_memory, kod_pc) VALUES ('{namepc}', '{window}', '{namecp}', '{operativmemory}', '{kodpc}')";
                 try
                 {
-                    // объект для выполнения SQL-запроса
                     MySqlCommand command = new MySqlCommand(sql4, conn);
-                    // выполняем запрос
                     InsertCount = command.ExecuteNonQuery();
-                    // закрываем подключение к БД
                 }
                 catch
                 {
@@ -244,12 +206,10 @@ namespace WindowsFormsApp1
                 }
                 finally
                 {
-                    //Но в любом случае, нужно закрыть соединение
                     conn.Close();
                     //Ессли количество вставленных строк было не 0, то есть вставлена хотя бы 1 строка
                     if (InsertCount !=0)
                     {
-                        //то результат операции - истина
                         result = true;
                     }
                 }
@@ -257,14 +217,11 @@ namespace WindowsFormsApp1
             else if (comboBox1.SelectedIndex==8)
             {
                 conn.Open();
-                string sql4 = $"INSERT INTO Comp9 (name_pc, windows, name_cp, operativ_memory, kod_pc) VALUES ('{namepc}', '{window}', '{namecp}', '{operativmemory}', '{kodpc}')";// запрос на дбавление параметров
+                string sql4 = $"INSERT INTO Comp9 (name_pc, windows, name_cp, operativ_memory, kod_pc) VALUES ('{namepc}', '{window}', '{namecp}', '{operativmemory}', '{kodpc}')"; 
                 try
                 {
-                    // объект для выполнения SQL-запроса
                     MySqlCommand command = new MySqlCommand(sql4, conn);
-                    // выполняем запрос
                     InsertCount = command.ExecuteNonQuery();
-                    // закрываем подключение к БД
                 }
                 catch
                 {
@@ -273,12 +230,10 @@ namespace WindowsFormsApp1
                 }
                 finally
                 {
-                    //Но в любом случае, нужно закрыть соединение
                     conn.Close();
                     //Ессли количество вставленных строк было не 0, то есть вставлена хотя бы 1 строка
                     if (InsertCount !=0)
                     {
-                        //то результат операции - истина
                         result = true;
                     }
                 }
@@ -292,7 +247,6 @@ namespace WindowsFormsApp1
             string NameCp = textBox3.Text;
             string OperativMemory = textBox4.Text;
             string KodPc = textBox5.Text;
-            //Чистим ListBox
             lb.Items.Clear();
             lb.Items.Add($"Имя компьютера: {NamePc}");
             lb.Items.Add($"Версия Windows: {Windows}");
@@ -351,22 +305,19 @@ namespace WindowsFormsApp1
             {
                 GetListComp(listBox1);
             }
-            //Иначе произошла какая то ошибка и покажем пользователю уведомление
             else
             {
-                MessageBox.Show("Произошла ошибка.");
-
+                MessageBox.Show($"Что-то пошло не по плану. Возможно не выбран автосервис! Или таблица перестала существовать");
             }
         }
         private void button2_Click(object sender, EventArgs e)
         {
             {
-                try//проверка на правильность данных
+                try
                 {
                     conn.Open();
                     MessageBox.Show("База данных работает стабильно");
                     conn.Close();
-
                 }
                 catch (Exception osh)
                 {

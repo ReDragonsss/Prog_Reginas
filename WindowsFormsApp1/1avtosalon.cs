@@ -33,10 +33,8 @@ namespace WindowsFormsApp1
         string id_selected_rows = "0";
         private void _1avtosalon_Load(object sender, EventArgs e)
         {
-
             string connStr = "server=caseum.ru;port=33333;user=st_2_21_19;database=st_2_21_19;password=30518003";
             conn=new MySqlConnection(connStr);
-            //string sql = $"SELECT name_pc, windows, name_cp, operativ_memory, kod_pc FROM Comp1";// запрос в бд
             GetListUsers();
             //Видимость полей в гриде
             dataGridView1.Columns[0].Visible = true;
@@ -44,7 +42,6 @@ namespace WindowsFormsApp1
             dataGridView1.Columns[2].Visible = true;
             dataGridView1.Columns[3].Visible = true;
             dataGridView1.Columns[4].Visible = true;
-
             //Ширина полей
             dataGridView1.Columns[0].FillWeight = 15;
             dataGridView1.Columns[1].FillWeight = 20;
@@ -67,16 +64,12 @@ namespace WindowsFormsApp1
             dataGridView1.RowHeadersVisible = false;
             //Показываем заголовки столбцов
             dataGridView1.ColumnHeadersVisible = true;
-
         }
         public void reload_list()
         {
-            //Чистим виртуальную таблицу
             table.Clear();
-            //Вызываем метод получения записей, который вновь заполнит таблицу
             GetListUsers();
         }
-
         //Метод получения ID выделенной строки, для последующего вызова его в нужных методах
         public void GetSelectedIDString()
         {
@@ -88,25 +81,20 @@ namespace WindowsFormsApp1
             id_selected_rows = dataGridView1.Rows[Convert.ToInt32(index_selected_rows)].Cells[0].Value.ToString();
             //Указываем ID выделенной строки в метке
             toolStripLabel2.Text = id_selected_rows;
-            ControlData.ID_STUD = id_selected_rows;
+            ControlData.ID_PC = id_selected_rows;
         }
         public void GetListUsers()
         {
             if (toolStripComboBox1.SelectedIndex == 0)
             {
-                //Запрос для вывода строк в БД
                 string commandStr = "SELECT name_pc, windows, name_cp, operativ_memory, kod_pc  FROM Comp1";
-                //Открываем соединение
                 conn.Open();
-                //Объявляем команду, которая выполнить запрос в соединении conn
                 MyDA.SelectCommand = new MySqlCommand(commandStr, conn);
-                //Заполняем таблицу записями из БД
                 MyDA.Fill(table);
                 //Указываем, что источником данных в bindingsource является заполненная выше таблица
                 bSource.DataSource = table;
                 //Указываем, что источником данных ДатаГрида является bindingsource 
                 dataGridView1.DataSource = bSource;
-                //Закрываем соединение
                 conn.Close();
                 //Отражаем количество записей в ДатаГриде
                 int count_rows = dataGridView1.RowCount - 1;
@@ -114,19 +102,14 @@ namespace WindowsFormsApp1
             }
             else if (toolStripComboBox1.SelectedIndex == 1)
             {
-                //Запрос для вывода строк в БД
                 string commandStr = "SELECT name_pc, windows, name_cp, operativ_memory, kod_pc  FROM Comp2";
-                //Открываем соединение
                 conn.Open();
-                //Объявляем команду, которая выполнить запрос в соединении conn
                 MyDA.SelectCommand = new MySqlCommand(commandStr, conn);
-                //Заполняем таблицу записями из БД
                 MyDA.Fill(table);
                 //Указываем, что источником данных в bindingsource является заполненная выше таблица
                 bSource.DataSource = table;
                 //Указываем, что источником данных ДатаГрида является bindingsource 
                 dataGridView1.DataSource = bSource;
-                //Закрываем соединение
                 conn.Close();
                 //Отражаем количество записей в ДатаГриде
                 int count_rows = dataGridView1.RowCount - 1;
@@ -134,19 +117,14 @@ namespace WindowsFormsApp1
             }
             else if (toolStripComboBox1.SelectedIndex == 2)
             {
-                //Запрос для вывода строк в БД
                 string commandStr = "SELECT name_pc, windows, name_cp, operativ_memory, kod_pc  FROM Comp3";
-                //Открываем соединение
                 conn.Open();
-                //Объявляем команду, которая выполнить запрос в соединении conn
                 MyDA.SelectCommand = new MySqlCommand(commandStr, conn);
-                //Заполняем таблицу записями из БД
                 MyDA.Fill(table);
                 //Указываем, что источником данных в bindingsource является заполненная выше таблица
                 bSource.DataSource = table;
                 //Указываем, что источником данных ДатаГрида является bindingsource 
                 dataGridView1.DataSource = bSource;
-                //Закрываем соединение
                 conn.Close();
                 //Отражаем количество записей в ДатаГриде
                 int count_rows = dataGridView1.RowCount - 1;
@@ -154,19 +132,14 @@ namespace WindowsFormsApp1
             }
             else if (toolStripComboBox1.SelectedIndex == 3)
             {
-                //Запрос для вывода строк в БД
                 string commandStr = "SELECT name_pc, windows, name_cp, operativ_memory, kod_pc  FROM Comp4";
-                //Открываем соединение
                 conn.Open();
-                //Объявляем команду, которая выполнить запрос в соединении conn
                 MyDA.SelectCommand = new MySqlCommand(commandStr, conn);
-                //Заполняем таблицу записями из БД
                 MyDA.Fill(table);
                 //Указываем, что источником данных в bindingsource является заполненная выше таблица
                 bSource.DataSource = table;
                 //Указываем, что источником данных ДатаГрида является bindingsource 
                 dataGridView1.DataSource = bSource;
-                //Закрываем соединение
                 conn.Close();
                 //Отражаем количество записей в ДатаГриде
                 int count_rows = dataGridView1.RowCount - 1;
@@ -174,19 +147,14 @@ namespace WindowsFormsApp1
             }
             else if (toolStripComboBox1.SelectedIndex == 4)
             {
-                //Запрос для вывода строк в БД
                 string commandStr = "SELECT name_pc, windows, name_cp, operativ_memory, kod_pc  FROM Comp5";
-                //Открываем соединение
                 conn.Open();
-                //Объявляем команду, которая выполнить запрос в соединении conn
                 MyDA.SelectCommand = new MySqlCommand(commandStr, conn);
-                //Заполняем таблицу записями из БД
                 MyDA.Fill(table);
                 //Указываем, что источником данных в bindingsource является заполненная выше таблица
                 bSource.DataSource = table;
                 //Указываем, что источником данных ДатаГрида является bindingsource 
                 dataGridView1.DataSource = bSource;
-                //Закрываем соединение
                 conn.Close();
                 //Отражаем количество записей в ДатаГриде
                 int count_rows = dataGridView1.RowCount - 1;
@@ -194,19 +162,14 @@ namespace WindowsFormsApp1
             }
             else if (toolStripComboBox1.SelectedIndex == 5)
             {
-                //Запрос для вывода строк в БД
                 string commandStr = "SELECT name_pc, windows, name_cp, operativ_memory, kod_pc  FROM Comp6";
-                //Открываем соединение
                 conn.Open();
-                //Объявляем команду, которая выполнить запрос в соединении conn
                 MyDA.SelectCommand = new MySqlCommand(commandStr, conn);
-                //Заполняем таблицу записями из БД
                 MyDA.Fill(table);
                 //Указываем, что источником данных в bindingsource является заполненная выше таблица
                 bSource.DataSource = table;
                 //Указываем, что источником данных ДатаГрида является bindingsource 
                 dataGridView1.DataSource = bSource;
-                //Закрываем соединение
                 conn.Close();
                 //Отражаем количество записей в ДатаГриде
                 int count_rows = dataGridView1.RowCount - 1;
@@ -214,19 +177,14 @@ namespace WindowsFormsApp1
             }
             else if (toolStripComboBox1.SelectedIndex == 6)
             {
-                //Запрос для вывода строк в БД
                 string commandStr = "SELECT name_pc, windows, name_cp, operativ_memory, kod_pc  FROM Comp7";
-                //Открываем соединение
                 conn.Open();
-                //Объявляем команду, которая выполнить запрос в соединении conn
                 MyDA.SelectCommand = new MySqlCommand(commandStr, conn);
-                //Заполняем таблицу записями из БД
                 MyDA.Fill(table);
                 //Указываем, что источником данных в bindingsource является заполненная выше таблица
                 bSource.DataSource = table;
                 //Указываем, что источником данных ДатаГрида является bindingsource 
                 dataGridView1.DataSource = bSource;
-                //Закрываем соединение
                 conn.Close();
                 //Отражаем количество записей в ДатаГриде
                 int count_rows = dataGridView1.RowCount - 1;
@@ -234,19 +192,14 @@ namespace WindowsFormsApp1
             }
             else if (toolStripComboBox1.SelectedIndex == 7)
             {
-                //Запрос для вывода строк в БД
                 string commandStr = "SELECT name_pc, windows, name_cp, operativ_memory, kod_pc  FROM Comp8";
-                //Открываем соединение
                 conn.Open();
-                //Объявляем команду, которая выполнить запрос в соединении conn
                 MyDA.SelectCommand = new MySqlCommand(commandStr, conn);
-                //Заполняем таблицу записями из БД
                 MyDA.Fill(table);
                 //Указываем, что источником данных в bindingsource является заполненная выше таблица
                 bSource.DataSource = table;
                 //Указываем, что источником данных ДатаГрида является bindingsource 
                 dataGridView1.DataSource = bSource;
-                //Закрываем соединение
                 conn.Close();
                 //Отражаем количество записей в ДатаГриде
                 int count_rows = dataGridView1.RowCount - 1;
@@ -254,19 +207,14 @@ namespace WindowsFormsApp1
             }
             else if (toolStripComboBox1.SelectedIndex == 8)
             {
-                //Запрос для вывода строк в БД
                 string commandStr = "SELECT name_pc, windows, name_cp, operativ_memory, kod_pc  FROM Comp9";
-                //Открываем соединение
                 conn.Open();
-                //Объявляем команду, которая выполнить запрос в соединении conn
                 MyDA.SelectCommand = new MySqlCommand(commandStr, conn);
-                //Заполняем таблицу записями из БД
                 MyDA.Fill(table);
                 //Указываем, что источником данных в bindingsource является заполненная выше таблица
                 bSource.DataSource = table;
                 //Указываем, что источником данных ДатаГрида является bindingsource 
                 dataGridView1.DataSource = bSource;
-                //Закрываем соединение
                 conn.Close();
                 //Отражаем количество записей в ДатаГриде
                 int count_rows = dataGridView1.RowCount - 1;
@@ -274,41 +222,32 @@ namespace WindowsFormsApp1
             }
             else
             {
-                //Запрос для вывода строк в БД
                 string commandStr = "SELECT name_pc, windows, name_cp, operativ_memory, kod_pc  FROM Comp1";
-                //Открываем соединение
                 conn.Open();
-                //Объявляем команду, которая выполнить запрос в соединении conn
                 MyDA.SelectCommand = new MySqlCommand(commandStr, conn);
-                //Заполняем таблицу записями из БД
                 MyDA.Fill(table);
                 //Указываем, что источником данных в bindingsource является заполненная выше таблица
                 bSource.DataSource = table;
                 //Указываем, что источником данных ДатаГрида является bindingsource 
                 dataGridView1.DataSource = bSource;
-                //Закрываем соединение
                 conn.Close();
                 //Отражаем количество записей в ДатаГриде
                 int count_rows = dataGridView1.RowCount - 1;
                 toolStripLabel2.Text = (count_rows).ToString();
             }
         }
-
-        public bool DeleteInfo()
+        public bool DeleteInfo()// Запрос на удаление
         {
             conn.Open();
             int InsertCount = 0;
             bool result = false;
             if (toolStripComboBox1.SelectedIndex == 0)
             {
-                string SqlDelete = "DELETE FROM Comp1 WHERE name_pc ='"+ id_selected_rows+"'"; //запрос на удаление
+                string SqlDelete = "DELETE FROM Comp1 WHERE name_pc ='"+ id_selected_rows+"'";
                 try
                 {
-                    // объект для выполнения SQL-запроса
                     MySqlCommand command = new MySqlCommand(SqlDelete, conn);
-                    // выполняем запрос
                     InsertCount = command.ExecuteNonQuery();
-                    // закрываем подключение к БД
                 }
                 catch
                 {
@@ -317,7 +256,6 @@ namespace WindowsFormsApp1
                 }
                 finally
                 {
-                    //Но в любом случае, нужно закрыть соединение
                     conn.Close();
                     //Ессли количество вставленных строк было не 0, то есть вставлена хотя бы 1 строка
                     if (InsertCount != 0)
@@ -329,14 +267,11 @@ namespace WindowsFormsApp1
             }
             else if (toolStripComboBox1.SelectedIndex == 1)
             {
-                string SqlDelete = "DELETE FROM Comp2 WHERE name_pc ='"+ id_selected_rows+"'"; //запрос на удаление
+                string SqlDelete = "DELETE FROM Comp2 WHERE name_pc ='"+ id_selected_rows+"'"; 
                 try
                 {
-                    // объект для выполнения SQL-запроса
                     MySqlCommand command = new MySqlCommand(SqlDelete, conn);
-                    // выполняем запрос
                     InsertCount = command.ExecuteNonQuery();
-                    // закрываем подключение к БД
                 }
                 catch
                 {
@@ -345,7 +280,6 @@ namespace WindowsFormsApp1
                 }
                 finally
                 {
-                    //Но в любом случае, нужно закрыть соединение
                     conn.Close();
                     //Ессли количество вставленных строк было не 0, то есть вставлена хотя бы 1 строка
                     if (InsertCount != 0)
@@ -357,24 +291,19 @@ namespace WindowsFormsApp1
             }
             else if (toolStripComboBox1.SelectedIndex == 2)
             {
-                string SqlDelete = "DELETE FROM Comp3 WHERE name_pc ='"+ id_selected_rows+"'"; //запрос на удаление
+                string SqlDelete = "DELETE FROM Comp3 WHERE name_pc ='"+ id_selected_rows+"'";
                 try
                 {
-                    // объект для выполнения SQL-запроса
                     MySqlCommand command = new MySqlCommand(SqlDelete, conn);
-                    // выполняем запрос
                     InsertCount = command.ExecuteNonQuery();
-                    // закрываем подключение к БД
                 }
                 catch (Exception osh)
                 {
-                    //Если возникла ошибка, то запрос не вставит ни одной строки
                     InsertCount = 0;
                     MessageBox.Show($"Возникла ошибка -->{osh}");
                 }
                 finally
                 {
-                    //Но в любом случае, нужно закрыть соединение
                     conn.Close();
                     //Ессли количество вставленных строк было не 0, то есть вставлена хотя бы 1 строка
                     if (InsertCount != 0)
@@ -386,14 +315,11 @@ namespace WindowsFormsApp1
             }
             else if (toolStripComboBox1.SelectedIndex == 3)
             {
-                string SqlDelete = "DELETE FROM Comp4 WHERE name_pc ='"+ id_selected_rows+"'"; //запрос на удаление
+                string SqlDelete = "DELETE FROM Comp4 WHERE name_pc ='"+ id_selected_rows+"'";
                 try
                 {
-                    // объект для выполнения SQL-запроса
                     MySqlCommand command = new MySqlCommand(SqlDelete, conn);
-                    // выполняем запрос
                     InsertCount = command.ExecuteNonQuery();
-                    // закрываем подключение к БД
                 }
                 catch
                 {
@@ -402,7 +328,6 @@ namespace WindowsFormsApp1
                 }
                 finally
                 {
-                    //Но в любом случае, нужно закрыть соединение
                     conn.Close();
                     //Ессли количество вставленных строк было не 0, то есть вставлена хотя бы 1 строка
                     if (InsertCount != 0)
@@ -414,14 +339,11 @@ namespace WindowsFormsApp1
             }
             else if (toolStripComboBox1.SelectedIndex == 4)
             {
-                string SqlDelete = "DELETE FROM Comp5 WHERE name_pc ='"+ id_selected_rows+"'"; //запрос на удаление
+                string SqlDelete = "DELETE FROM Comp5 WHERE name_pc ='"+ id_selected_rows+"'";
                 try
                 {
-                    // объект для выполнения SQL-запроса
                     MySqlCommand command = new MySqlCommand(SqlDelete, conn);
-                    // выполняем запрос
                     InsertCount = command.ExecuteNonQuery();
-                    // закрываем подключение к БД
                 }
                 catch
                 {
@@ -430,7 +352,6 @@ namespace WindowsFormsApp1
                 }
                 finally
                 {
-                    //Но в любом случае, нужно закрыть соединение
                     conn.Close();
                     //Ессли количество вставленных строк было не 0, то есть вставлена хотя бы 1 строка
                     if (InsertCount != 0)
@@ -442,14 +363,11 @@ namespace WindowsFormsApp1
             }
             else if (toolStripComboBox1.SelectedIndex == 5)
             {
-                string SqlDelete = "DELETE FROM Comp6 WHERE name_pc ='"+ id_selected_rows+"'"; //запрос на удаление
+                string SqlDelete = "DELETE FROM Comp6 WHERE name_pc ='"+ id_selected_rows+"'"; 
                 try
                 {
-                    // объект для выполнения SQL-запроса
                     MySqlCommand command = new MySqlCommand(SqlDelete, conn);
-                    // выполняем запрос
                     InsertCount = command.ExecuteNonQuery();
-                    // закрываем подключение к БД
                 }
                 catch
                 {
@@ -458,7 +376,6 @@ namespace WindowsFormsApp1
                 }
                 finally
                 {
-                    //Но в любом случае, нужно закрыть соединение
                     conn.Close();
                     //Ессли количество вставленных строк было не 0, то есть вставлена хотя бы 1 строка
                     if (InsertCount != 0)
@@ -470,14 +387,11 @@ namespace WindowsFormsApp1
             }
             else if (toolStripComboBox1.SelectedIndex == 6)
             {
-                string SqlDelete = "DELETE FROM Comp7 WHERE name_pc ='"+ id_selected_rows+"'"; //запрос на удаление
+                string SqlDelete = "DELETE FROM Comp7 WHERE name_pc ='"+ id_selected_rows+"'";
                 try
                 {
-                    // объект для выполнения SQL-запроса
                     MySqlCommand command = new MySqlCommand(SqlDelete, conn);
-                    // выполняем запрос
                     InsertCount = command.ExecuteNonQuery();
-                    // закрываем подключение к БД
                 }
                 catch
                 {
@@ -486,7 +400,6 @@ namespace WindowsFormsApp1
                 }
                 finally
                 {
-                    //Но в любом случае, нужно закрыть соединение
                     conn.Close();
                     //Ессли количество вставленных строк было не 0, то есть вставлена хотя бы 1 строка
                     if (InsertCount != 0)
@@ -498,14 +411,11 @@ namespace WindowsFormsApp1
             }
             else if (toolStripComboBox1.SelectedIndex == 7)
             {
-                string SqlDelete = "DELETE FROM Comp8 WHERE name_pc ='"+ id_selected_rows+"'"; //запрос на удаление
+                string SqlDelete = "DELETE FROM Comp8 WHERE name_pc ='"+ id_selected_rows+"'";
                 try
                 {
-                    // объект для выполнения SQL-запроса
                     MySqlCommand command = new MySqlCommand(SqlDelete, conn);
-                    // выполняем запрос
                     InsertCount = command.ExecuteNonQuery();
-                    // закрываем подключение к БД
                 }
                 catch
                 {
@@ -514,7 +424,6 @@ namespace WindowsFormsApp1
                 }
                 finally
                 {
-                    //Но в любом случае, нужно закрыть соединение
                     conn.Close();
                     //Ессли количество вставленных строк было не 0, то есть вставлена хотя бы 1 строка
                     if (InsertCount != 0)
@@ -526,14 +435,11 @@ namespace WindowsFormsApp1
             }
             else if (toolStripComboBox1.SelectedIndex == 8)
             {
-                string SqlDelete = "DELETE FROM Comp9 WHERE name_pc ='"+ id_selected_rows+"'"; //запрос на удаление
+                string SqlDelete = "DELETE FROM Comp9 WHERE name_pc ='"+ id_selected_rows+"'"; 
                 try
                 {
-                    // объект для выполнения SQL-запроса
                     MySqlCommand command = new MySqlCommand(SqlDelete, conn);
-                    // выполняем запрос
                     InsertCount = command.ExecuteNonQuery();
-                    // закрываем подключение к БД
                 }
                 catch
                 {
@@ -542,7 +448,6 @@ namespace WindowsFormsApp1
                 }
                 finally
                 {
-                    //Но в любом случае, нужно закрыть соединение
                     conn.Close();
                     //Ессли количество вставленных строк было не 0, то есть вставлена хотя бы 1 строка
                     if (InsertCount != 0)
@@ -566,7 +471,6 @@ namespace WindowsFormsApp1
         {
             DeleteInfo();
         }
-
         private void dataGridView1_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (!e.RowIndex.Equals(-1) && !e.ColumnIndex.Equals(-1) && e.Button.Equals(MouseButtons.Right))
@@ -577,11 +481,10 @@ namespace WindowsFormsApp1
                 GetSelectedIDString();
             }
         }
-
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
             ControlData.ComboId=toolStripComboBox1.Text;
-            ControlData.ID_STUD = id_selected_rows;
+            ControlData.ID_PC = id_selected_rows;
             Form1 form1 = new Form1();
             form1.ShowDialog();
             reload_list();
@@ -589,7 +492,7 @@ namespace WindowsFormsApp1
         private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             ControlData.ComboId=toolStripComboBox1.Text;
-            ControlData.ID_STUD = id_selected_rows;
+            ControlData.ID_PC = id_selected_rows;
             Form1 form1 = new Form1();
             form1.ShowDialog();
             reload_list();

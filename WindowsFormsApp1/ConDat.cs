@@ -14,9 +14,8 @@ namespace WindowsFormsApp1
 {
     class ControlData
     {
-        public static string ID_STUD = "0";
+        public static string ID_PC = "0";
         public static string ComboId = "0";
-        //Определяем параметры подключения
         private const string host = "caseum.ru";
         private const string port = "33333";
         private const string database = "st_2_21_19";
@@ -37,11 +36,8 @@ namespace WindowsFormsApp1
         //Статичный метод, формирующий строку для подключения и возвращающий MySqlConnection
         public static MySqlConnection GetDBConnection()
         {
-            //Формируем строку подключения
             string connString = $"server={host};port={port};user={username};database={database};password={password};";
-            //Создаём соединение с нашей строкой подключения
             MySqlConnection conn = new MySqlConnection(connString);
-            //Возвращаем данное соединение из метода
             return conn;
         }
     }
