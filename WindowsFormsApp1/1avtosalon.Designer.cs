@@ -140,6 +140,7 @@
             this.ClientSize = new System.Drawing.Size(802, 439);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.dataGridView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "_1avtosalon";
             this.Text = "Общая база данных";

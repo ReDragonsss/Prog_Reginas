@@ -49,10 +49,10 @@ namespace WindowsFormsApp1
             else if (comboBox1.SelectedIndex==1)
             {
                 conn.Open();
-                string sql1 = $"INSERT INTO Comp2 (name_pc, windows, name_cp, operativ_memory, kod_pc) VALUES ('{namepc}', '{window}', '{namecp}', '{operativmemory}', '{kodpc}')";
+                string sql = $"INSERT INTO Comp2 (name_pc, windows, name_cp, operativ_memory, kod_pc) VALUES ('{namepc}', '{window}', '{namecp}', '{operativmemory}', '{kodpc}')";
                 try
                 {
-                    MySqlCommand command = new MySqlCommand(sql1, conn);
+                    MySqlCommand command = new MySqlCommand(sql, conn);
                     InsertCount = command.ExecuteNonQuery();
                 }
                 catch
@@ -73,10 +73,10 @@ namespace WindowsFormsApp1
             else if (comboBox1.SelectedIndex==2)
             {
                 conn.Open();
-                string sql2 = $"INSERT INTO Comp3 (name_pc, windows, name_cp, operativ_memory, kod_pc) VALUES ('{namepc}', '{window}', '{namecp}', '{operativmemory}', '{kodpc}')";
+                string sql = $"INSERT INTO Comp3 (name_pc, windows, name_cp, operativ_memory, kod_pc) VALUES ('{namepc}', '{window}', '{namecp}', '{operativmemory}', '{kodpc}')";
                 try
                 {
-                    MySqlCommand command = new MySqlCommand(sql2, conn);
+                    MySqlCommand command = new MySqlCommand(sql, conn);
                     InsertCount = command.ExecuteNonQuery();
                 }
                 catch
@@ -97,10 +97,10 @@ namespace WindowsFormsApp1
             else if (comboBox1.SelectedIndex==3)
             {
                 conn.Open();
-                string sql3 = $"INSERT INTO Comp4 (name_pc, windows, name_cp, operativ_memory, kod_pc) VALUES ('{namepc}', '{window}', '{namecp}', '{operativmemory}', '{kodpc}')";
+                string sql = $"INSERT INTO Comp4 (name_pc, windows, name_cp, operativ_memory, kod_pc) VALUES ('{namepc}', '{window}', '{namecp}', '{operativmemory}', '{kodpc}')";
                 try
                 {
-                    MySqlCommand command = new MySqlCommand(sql3, conn);
+                    MySqlCommand command = new MySqlCommand(sql, conn);
                     InsertCount = command.ExecuteNonQuery();
                 }
                 catch
@@ -121,10 +121,10 @@ namespace WindowsFormsApp1
             else if (comboBox1.SelectedIndex==4)
             {
                 conn.Open();
-                string sql4 = $"INSERT INTO Comp5 (name_pc, windows, name_cp, operativ_memory, kod_pc) VALUES ('{namepc}', '{window}', '{namecp}', '{operativmemory}', '{kodpc}')";
+                string sql = $"INSERT INTO Comp5 (name_pc, windows, name_cp, operativ_memory, kod_pc) VALUES ('{namepc}', '{window}', '{namecp}', '{operativmemory}', '{kodpc}')";
                 try
                 {
-                    MySqlCommand command = new MySqlCommand(sql4, conn);
+                    MySqlCommand command = new MySqlCommand(sql, conn);
                     InsertCount = command.ExecuteNonQuery();
                 }
                 catch
@@ -145,10 +145,10 @@ namespace WindowsFormsApp1
             else if (comboBox1.SelectedIndex==5)
             {
                 conn.Open();
-                string sql4 = $"INSERT INTO Comp6 (name_pc, windows, name_cp, operativ_memory, kod_pc) VALUES ('{namepc}', '{window}', '{namecp}', '{operativmemory}', '{kodpc}')";
+                string sql = $"INSERT INTO Comp6 (name_pc, windows, name_cp, operativ_memory, kod_pc) VALUES ('{namepc}', '{window}', '{namecp}', '{operativmemory}', '{kodpc}')";
                 try
                 {
-                    MySqlCommand command = new MySqlCommand(sql4, conn);
+                    MySqlCommand command = new MySqlCommand(sql, conn);
                     InsertCount = command.ExecuteNonQuery();
                 }
                 catch
@@ -169,10 +169,10 @@ namespace WindowsFormsApp1
             else if (comboBox1.SelectedIndex==6)
             {
                 conn.Open();
-                string sql4 = $"INSERT INTO Comp7 (name_pc, windows, name_cp, operativ_memory, kod_pc) VALUES ('{namepc}', '{window}', '{namecp}', '{operativmemory}', '{kodpc}')";
+                string sql = $"INSERT INTO Comp7 (name_pc, windows, name_cp, operativ_memory, kod_pc) VALUES ('{namepc}', '{window}', '{namecp}', '{operativmemory}', '{kodpc}')";
                 try
                 {
-                    MySqlCommand command = new MySqlCommand(sql4, conn);
+                    MySqlCommand command = new MySqlCommand(sql, conn);
                     InsertCount = command.ExecuteNonQuery();
                 }
                 catch
@@ -193,10 +193,10 @@ namespace WindowsFormsApp1
             else if (comboBox1.SelectedIndex==7)
             {
                 conn.Open();
-                string sql4 = $"INSERT INTO Comp8 (name_pc, windows, name_cp, operativ_memory, kod_pc) VALUES ('{namepc}', '{window}', '{namecp}', '{operativmemory}', '{kodpc}')";
+                string sql = $"INSERT INTO Comp8 (name_pc, windows, name_cp, operativ_memory, kod_pc) VALUES ('{namepc}', '{window}', '{namecp}', '{operativmemory}', '{kodpc}')";
                 try
                 {
-                    MySqlCommand command = new MySqlCommand(sql4, conn);
+                    MySqlCommand command = new MySqlCommand(sql, conn);
                     InsertCount = command.ExecuteNonQuery();
                 }
                 catch
@@ -217,10 +217,10 @@ namespace WindowsFormsApp1
             else if (comboBox1.SelectedIndex==8)
             {
                 conn.Open();
-                string sql4 = $"INSERT INTO Comp9 (name_pc, windows, name_cp, operativ_memory, kod_pc) VALUES ('{namepc}', '{window}', '{namecp}', '{operativmemory}', '{kodpc}')"; 
+                string sql = $"INSERT INTO Comp9 (name_pc, windows, name_cp, operativ_memory, kod_pc) VALUES ('{namepc}', '{window}', '{namecp}', '{operativmemory}', '{kodpc}')"; 
                 try
                 {
-                    MySqlCommand command = new MySqlCommand(sql4, conn);
+                    MySqlCommand command = new MySqlCommand(sql, conn);
                     InsertCount = command.ExecuteNonQuery();
                 }
                 catch
@@ -312,7 +312,7 @@ namespace WindowsFormsApp1
             }
             else
             {
-                MessageBox.Show($"Что-то пошло не по плану. Возможно не выбран автосервис! Или таблица перестала существовать");
+                MessageBox.Show($"Что-то пошло не по плану. Возможно не выбран автосервис! Или таблица перестала существовать?");
             }
         }
         private void button2_Click(object sender, EventArgs e)
@@ -333,3 +333,33 @@ namespace WindowsFormsApp1
         }
     }
 }
+
+//String str;
+//SqlConnection conn = new SqlConnection ("server=caseum.ru;port=33333;user=st_2_21_19;database=st_2_21_19;password=30518003");
+//CreateWorld = "CREATE DATABASE {perem}" +
+// "(NAME = MyDatabase_Data, " +
+// "FILENAME = 'C:\\MyDatabaseData.mdf', " +
+// "SIZE = 2MB, MAXSIZE = 10MB, FILEGROWTH = 10%)" +
+// "LOG ON (NAME = MyDatabase_Log, " +
+// "FILENAME = 'C:\\MyDatabaseLog.ldf', " +
+// "SIZE = 1MB, " +
+// "MAXSIZE = 5MB, " +
+// "FILEGROWTH = 10%)";
+//SqlCommand Command = new SqlCommand(CreateWorld, conn);
+//try
+//{
+//    conn.Open();
+//    Command.ExecuteNonQuery();
+//    MessageBox.Show("Оно возможно работает");
+//}
+//catch (Exception osh)
+//{
+//    MessageBox.Show($"ну а как иначе: {osh}");
+//}
+//finally
+//{
+//    if (conn.State == ConnectionState.Open)
+//    {
+//      conn.Close();
+//    }
+//}
