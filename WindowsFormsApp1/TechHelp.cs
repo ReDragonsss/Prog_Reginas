@@ -16,10 +16,19 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
-
-        private void label2_Click(object sender, EventArgs e)
+        private void pictureBox3_Click(object sender, EventArgs e)
         {
+            System.Diagnostics.Process.Start("https://disk.yandex.ru/client/disk/%D0%9F%D1%80%D0%BE%D0%B3%D0%B0");
+        }
 
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://vk.com/redragonss");
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/ReDragonsss/Prog_Reginas");
         }
     }
 }

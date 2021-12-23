@@ -129,5 +129,32 @@
   <ItemGroup>
     <None Include="Resources\download.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\709109_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-computer-icons-vector-graphics-email-writing-icon-icne-modifier-gratuit-de-internet-and-web-flat-i-5bb15efaea8e34.4264933615383508429607.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-clipart-computer-icons-symbol-miscellaneous-cdr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-transparent-computer-icons-cdr-refresh-cdr-trademark-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-transparent-github-microsoft-corporation-version-control-repository-github-mammal-cat-like-mammal-carnivoran.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\github.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\github1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dr.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Безымянный1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
