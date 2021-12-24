@@ -126,13 +126,15 @@
             this.comboBox1.Items.AddRange(new object[] {
             "Changan",
             "Kia",
-            "Naval",
+            "Haval",
             "Shkoda",
             "Nissan",
             "Mitsubishi",
             "Subaru",
             "Geely",
-            "Peugeot"});
+            "Peugeot",
+            "Opel",
+            "Trade-in"});
             this.comboBox1.Location = new System.Drawing.Point(165, 141);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(135, 21);

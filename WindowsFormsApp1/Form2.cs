@@ -238,6 +238,54 @@ namespace WindowsFormsApp1
                     }
                 }
             }
+            else if (comboBox1.SelectedIndex==9)
+            {
+                conn.Open();
+                string sql = $"INSERT INTO Comp10 (name_pc, windows, name_cp, operativ_memory, kod_pc) VALUES ('{namepc}', '{window}', '{namecp}', '{operativmemory}', '{kodpc}')";
+                try
+                {
+                    MySqlCommand command = new MySqlCommand(sql, conn);
+                    InsertCount = command.ExecuteNonQuery();
+                }
+                catch
+                {
+                    //Если возникла ошибка, то запрос не вставит ни одной строки
+                    InsertCount = 0;
+                }
+                finally
+                {
+                    conn.Close();
+                    //Ессли количество вставленных строк было не 0, то есть вставлена хотя бы 1 строка
+                    if (InsertCount !=0)
+                    {
+                        result = true;
+                    }
+                }
+            }
+            else if (comboBox1.SelectedIndex==10)
+            {
+                conn.Open();
+                string sql = $"INSERT INTO Comp11 (name_pc, windows, name_cp, operativ_memory, kod_pc) VALUES ('{namepc}', '{window}', '{namecp}', '{operativmemory}', '{kodpc}')";
+                try
+                {
+                    MySqlCommand command = new MySqlCommand(sql, conn);
+                    InsertCount = command.ExecuteNonQuery();
+                }
+                catch
+                {
+                    //Если возникла ошибка, то запрос не вставит ни одной строки
+                    InsertCount = 0;
+                }
+                finally
+                {
+                    conn.Close();
+                    //Ессли количество вставленных строк было не 0, то есть вставлена хотя бы 1 строка
+                    if (InsertCount !=0)
+                    {
+                        result = true;
+                    }
+                }
+            }
             return result;
         }
         public void GetListComp(ListBox lb)
@@ -307,6 +355,14 @@ namespace WindowsFormsApp1
                 GetListComp(listBox1);
             }
             else if (comboBox1.SelectedIndex == 8 && InsertComp(NamePc, Windows, NameCp, OperativMemory, KodPc))
+            {
+                GetListComp(listBox1);
+            }
+            else if (comboBox1.SelectedIndex == 9 && InsertComp(NamePc, Windows, NameCp, OperativMemory, KodPc))
+            {
+                GetListComp(listBox1);
+            }
+            else if (comboBox1.SelectedIndex == 10 && InsertComp(NamePc, Windows, NameCp, OperativMemory, KodPc))
             {
                 GetListComp(listBox1);
             }

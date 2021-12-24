@@ -99,7 +99,9 @@
             "Mitsubishi",
             "Subaru",
             "Geely",
-            "Peugeot"});
+            "Peugeot",
+            "Opel",
+            "Trade-in"});
             this.toolStripComboBox1.Name = "toolStripComboBox1";
             this.toolStripComboBox1.Size = new System.Drawing.Size(121, 25);
             // 

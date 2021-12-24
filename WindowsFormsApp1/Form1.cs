@@ -102,7 +102,7 @@ namespace WindowsFormsApp1
             }
             else if (ControlData.ComboId=="Nissan")
             {
-                string SqlSelect = $"SELECT name_pc, windows, name_cp, operativ_memory FROM Comp4 WHERE name_pc = '{ControlData.ID_PC}'";
+                string SqlSelect = $"SELECT name_pc, windows, name_cp, operativ_memory FROM Comp5 WHERE name_pc = '{ControlData.ID_PC}'";
                 MySqlCommand command = new MySqlCommand(SqlSelect, conn);
                 // объект для чтения ответа сервера
                 MySqlDataReader reader = command.ExecuteReader();
@@ -121,7 +121,7 @@ namespace WindowsFormsApp1
             }
             else if (ControlData.ComboId=="Mitsubishi")
             {
-                string SqlSelect = $"SELECT name_pc, windows, name_cp, operativ_memory FROM Comp4 WHERE name_pc = '{ControlData.ID_PC}'";
+                string SqlSelect = $"SELECT name_pc, windows, name_cp, operativ_memory FROM Comp6 WHERE name_pc = '{ControlData.ID_PC}'";
                 // объект для выполнения SQL-запроса
                 MySqlCommand command = new MySqlCommand(SqlSelect, conn);
                 // объект для чтения ответа сервера
@@ -141,7 +141,7 @@ namespace WindowsFormsApp1
             }
             else if (ControlData.ComboId=="Subaru")
             {
-                string SqlSelect = $"SELECT name_pc, windows, name_cp, operativ_memory FROM Comp4 WHERE name_pc = '{ControlData.ID_PC}'";
+                string SqlSelect = $"SELECT name_pc, windows, name_cp, operativ_memory FROM Comp7 WHERE name_pc = '{ControlData.ID_PC}'";
                 // объект для выполнения SQL-запроса
                 MySqlCommand command = new MySqlCommand(SqlSelect, conn);
                 // объект для чтения ответа сервера
@@ -161,7 +161,7 @@ namespace WindowsFormsApp1
             }
             else if (ControlData.ComboId=="Geely")
             {
-                string SqlSelect = $"SELECT name_pc, windows, name_cp, operativ_memory FROM Comp4 WHERE name_pc = '{ControlData.ID_PC}'";
+                string SqlSelect = $"SELECT name_pc, windows, name_cp, operativ_memory FROM Comp8 WHERE name_pc = '{ControlData.ID_PC}'";
                 // объект для выполнения SQL-запроса
                 MySqlCommand command = new MySqlCommand(SqlSelect, conn);
                 // объект для чтения ответа сервера
@@ -181,7 +181,47 @@ namespace WindowsFormsApp1
             }
             else if (ControlData.ComboId=="Peugeot")
             {
-                string SqlSelect = $"SELECT name_pc, windows, name_cp, operativ_memory FROM Comp4 WHERE name_pc = '{ControlData.ID_PC}'";
+                string SqlSelect = $"SELECT name_pc, windows, name_cp, operativ_memory FROM Comp9 WHERE name_pc = '{ControlData.ID_PC}'";
+                // объект для выполнения SQL-запроса
+                MySqlCommand command = new MySqlCommand(SqlSelect, conn);
+                // объект для чтения ответа сервера
+                MySqlDataReader reader = command.ExecuteReader();
+                // читаем результат
+                while (reader.Read())
+                {
+                    // элементы массива [] - это значения столбцов из запроса SELECT
+                    textBox1.Text = reader[0].ToString();
+                    textBox2.Text = reader[1].ToString();
+                    textBox3.Text = reader[2].ToString();
+                    textBox4.Text = reader[3].ToString();
+
+                }
+                reader.Close();
+                conn.Close();
+            }
+            else if (ControlData.ComboId=="Opel")
+            {
+                string SqlSelect = $"SELECT name_pc, windows, name_cp, operativ_memory FROM Comp10 WHERE name_pc = '{ControlData.ID_PC}'";
+                // объект для выполнения SQL-запроса
+                MySqlCommand command = new MySqlCommand(SqlSelect, conn);
+                // объект для чтения ответа сервера
+                MySqlDataReader reader = command.ExecuteReader();
+                // читаем результат
+                while (reader.Read())
+                {
+                    // элементы массива [] - это значения столбцов из запроса SELECT
+                    textBox1.Text = reader[0].ToString();
+                    textBox2.Text = reader[1].ToString();
+                    textBox3.Text = reader[2].ToString();
+                    textBox4.Text = reader[3].ToString();
+
+                }
+                reader.Close();
+                conn.Close();
+            }
+            else if (ControlData.ComboId=="Trade-in")
+            {
+                string SqlSelect = $"SELECT name_pc, windows, name_cp, operativ_memory FROM Comp11 WHERE name_pc = '{ControlData.ID_PC}'";
                 // объект для выполнения SQL-запроса
                 MySqlCommand command = new MySqlCommand(SqlSelect, conn);
                 // объект для чтения ответа сервера
@@ -256,7 +296,7 @@ namespace WindowsFormsApp1
             }
             else if (ControlData.ComboId=="Nissan")
             {
-                string sql_update = $"UPDATE Comp2 SET name_pc='{n_pc}', windows='{wind}', name_cp='{n_cp}', operativ_memory='{opermem}'" +
+                string sql_update = $"UPDATE Comp5 SET name_pc='{n_pc}', windows='{wind}', name_cp='{n_cp}', operativ_memory='{opermem}'" +
   $"WHERE (name_pc='{ControlData.ID_PC}')";
                 conn.Open();
                 MySqlCommand command = new MySqlCommand(sql_update, conn);
@@ -266,7 +306,7 @@ namespace WindowsFormsApp1
             }
             else if (ControlData.ComboId=="Mitsubishi")
             {
-                string sql_update = $"UPDATE Comp2 SET name_pc='{n_pc}', windows='{wind}', name_cp='{n_cp}', operativ_memory='{opermem}'" +
+                string sql_update = $"UPDATE Comp6 SET name_pc='{n_pc}', windows='{wind}', name_cp='{n_cp}', operativ_memory='{opermem}'" +
   $"WHERE (name_pc='{ControlData.ID_PC}')";
                 conn.Open();
                 MySqlCommand command = new MySqlCommand(sql_update, conn);
@@ -276,7 +316,7 @@ namespace WindowsFormsApp1
             }
             else if (ControlData.ComboId=="Geely")
             {
-                string sql_update = $"UPDATE Comp2 SET name_pc='{n_pc}', windows='{wind}', name_cp='{n_cp}', operativ_memory='{opermem}'" +
+                string sql_update = $"UPDATE Comp7 SET name_pc='{n_pc}', windows='{wind}', name_cp='{n_cp}', operativ_memory='{opermem}'" +
   $"WHERE (name_pc='{ControlData.ID_PC}')";
                 conn.Open();
                 MySqlCommand command = new MySqlCommand(sql_update, conn);
@@ -286,7 +326,7 @@ namespace WindowsFormsApp1
             }
             else if (ControlData.ComboId=="Peugeot")
             {
-                string sql_update = $"UPDATE Comp2 SET name_pc='{n_pc}', windows='{wind}', name_cp='{n_cp}', operativ_memory='{opermem}'" +
+                string sql_update = $"UPDATE Comp8 SET name_pc='{n_pc}', windows='{wind}', name_cp='{n_cp}', operativ_memory='{opermem}'" +
   $"WHERE (name_pc='{ControlData.ID_PC}')";
                 conn.Open();
                 MySqlCommand command = new MySqlCommand(sql_update, conn);
@@ -296,7 +336,27 @@ namespace WindowsFormsApp1
             }
             else if (ControlData.ComboId=="Kia")
             {
-                string sql_update = $"UPDATE Comp2 SET name_pc='{n_pc}', windows='{wind}', name_cp='{n_cp}', operativ_memory='{opermem}'" +
+                string sql_update = $"UPDATE Comp9 SET name_pc='{n_pc}', windows='{wind}', name_cp='{n_cp}', operativ_memory='{opermem}'" +
+  $"WHERE (name_pc='{ControlData.ID_PC}')";
+                conn.Open();
+                MySqlCommand command = new MySqlCommand(sql_update, conn);
+                command.ExecuteNonQuery();
+                conn.Close();
+                this.Close();
+            }
+            else if (ControlData.ComboId=="Opel")
+            {
+                string sql_update = $"UPDATE Comp10 SET name_pc='{n_pc}', windows='{wind}', name_cp='{n_cp}', operativ_memory='{opermem}'" +
+  $"WHERE (name_pc='{ControlData.ID_PC}')";
+                conn.Open();
+                MySqlCommand command = new MySqlCommand(sql_update, conn);
+                command.ExecuteNonQuery();
+                conn.Close();
+                this.Close();
+            }
+            else if (ControlData.ComboId=="Trade-in")
+            {
+                string sql_update = $"UPDATE Comp11 SET name_pc='{n_pc}', windows='{wind}', name_cp='{n_cp}', operativ_memory='{opermem}'" +
   $"WHERE (name_pc='{ControlData.ID_PC}')";
                 conn.Open();
                 MySqlCommand command = new MySqlCommand(sql_update, conn);

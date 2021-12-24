@@ -24,8 +24,6 @@ namespace WindowsFormsApp1
         private BindingSource bSource = new BindingSource();
         //DataSet - расположенное в оперативной памяти представление данных, обеспечивающее согласованную реляционную программную 
         //модель независимо от источника данных.DataSet представляет полный набор данных, включая таблицы, содержащие, упорядочивающие 
-        //и ограничивающие данные, а также связи между таблицами.
-        private DataSet ds = new DataSet();
         //Представляет одну таблицу данных в памяти.
         private DataTable table = new DataTable();
         //Переменная для ID записи в БД, выбранной в гриде. Пока она не содердит значения, лучше его инициализировать с 0
@@ -64,6 +62,11 @@ namespace WindowsFormsApp1
             dataGridView1.RowHeadersVisible = false;
             //Показываем заголовки столбцов
             dataGridView1.ColumnHeadersVisible = true;
+            dataGridView1.Columns[0].HeaderText="Имя компьютера";
+            dataGridView1.Columns[1].HeaderText="Версия винды";
+            dataGridView1.Columns[2].HeaderText="Процессор";
+            dataGridView1.Columns[3].HeaderText="Кол-во оперативки";
+            dataGridView1.Columns[4].HeaderText="Код инвентаризации";
         }
         public void reload_list()
         {
@@ -208,6 +211,36 @@ namespace WindowsFormsApp1
             else if (toolStripComboBox1.SelectedIndex == 8)
             {
                 string commandStr = "SELECT name_pc, windows, name_cp, operativ_memory, kod_pc  FROM Comp9";
+                conn.Open();
+                MyDA.SelectCommand = new MySqlCommand(commandStr, conn);
+                MyDA.Fill(table);
+                //Указываем, что источником данных в bindingsource является заполненная выше таблица
+                bSource.DataSource = table;
+                //Указываем, что источником данных ДатаГрида является bindingsource 
+                dataGridView1.DataSource = bSource;
+                conn.Close();
+                //Отражаем количество записей в ДатаГриде
+                int count_rows = dataGridView1.RowCount - 1;
+                toolStripLabel2.Text = (count_rows).ToString();
+            }
+            else if (toolStripComboBox1.SelectedIndex == 9)
+            {
+                string commandStr = "SELECT name_pc, windows, name_cp, operativ_memory, kod_pc  FROM Comp10";
+                conn.Open();
+                MyDA.SelectCommand = new MySqlCommand(commandStr, conn);
+                MyDA.Fill(table);
+                //Указываем, что источником данных в bindingsource является заполненная выше таблица
+                bSource.DataSource = table;
+                //Указываем, что источником данных ДатаГрида является bindingsource 
+                dataGridView1.DataSource = bSource;
+                conn.Close();
+                //Отражаем количество записей в ДатаГриде
+                int count_rows = dataGridView1.RowCount - 1;
+                toolStripLabel2.Text = (count_rows).ToString();
+            }
+            else if (toolStripComboBox1.SelectedIndex == 10)
+            {
+                string commandStr = "SELECT name_pc, windows, name_cp, operativ_memory, kod_pc  FROM Comp11";
                 conn.Open();
                 MyDA.SelectCommand = new MySqlCommand(commandStr, conn);
                 MyDA.Fill(table);
@@ -457,10 +490,59 @@ namespace WindowsFormsApp1
                     }
                 }
             }
+            else if (toolStripComboBox1.SelectedIndex == 9)
+            {
+                string SqlDelete = "DELETE FROM Comp10 WHERE name_pc ='"+ id_selected_rows+"'";
+                try
+                {
+                    MySqlCommand command = new MySqlCommand(SqlDelete, conn);
+                    InsertCount = command.ExecuteNonQuery();
+                }
+                catch
+                {
+                    //Если возникла ошибка, то запрос не вставит ни одной строки
+                    InsertCount = 0;
+                }
+                finally
+                {
+                    conn.Close();
+                    //Ессли количество вставленных строк было не 0, то есть вставлена хотя бы 1 строка
+                    if (InsertCount != 0)
+                    {
+                        MessageBox.Show($"Успешное удаление данных");
+                        reload_list();
+                    }
+                }
+            }
+            else if (toolStripComboBox1.SelectedIndex == 10)
+            {
+                string SqlDelete = "DELETE FROM Comp11 WHERE name_pc ='"+ id_selected_rows+"'";
+                try
+                {
+                    MySqlCommand command = new MySqlCommand(SqlDelete, conn);
+                    InsertCount = command.ExecuteNonQuery();
+                }
+                catch
+                {
+                    //Если возникла ошибка, то запрос не вставит ни одной строки
+                    InsertCount = 0;
+                }
+                finally
+                {
+                    conn.Close();
+                    //Ессли количество вставленных строк было не 0, то есть вставлена хотя бы 1 строка
+                    if (InsertCount != 0)
+                    {
+                        MessageBox.Show($"Успешное удаление данных");
+                        reload_list();
+                    }
+                }
+            }
             else
             {
                 MessageBox.Show("Ошибка удаление. Возможно невыбран компьютер?");  
             }
+
             return result;
         }
         private void toolStripButton1_Click(object sender, EventArgs e)
