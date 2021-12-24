@@ -33,5 +33,10 @@ namespace WindowsFormsApp1
             TechHelp techHelp = new TechHelp();
             techHelp.Show();
         }
+
+        private void main_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

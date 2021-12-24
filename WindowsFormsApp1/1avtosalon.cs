@@ -41,11 +41,11 @@ namespace WindowsFormsApp1
             dataGridView1.Columns[3].Visible = true;
             dataGridView1.Columns[4].Visible = true;
             //Ширина полей
-            dataGridView1.Columns[0].FillWeight = 15;
-            dataGridView1.Columns[1].FillWeight = 20;
+            dataGridView1.Columns[0].FillWeight = 14;
+            dataGridView1.Columns[1].FillWeight = 21;
             dataGridView1.Columns[2].FillWeight = 25;
-            dataGridView1.Columns[3].FillWeight = 30;
-            dataGridView1.Columns[4].FillWeight = 10;
+            dataGridView1.Columns[3].FillWeight = 28;
+            dataGridView1.Columns[4].FillWeight = 12;
             //Режим для полей "Только для чтения"
             dataGridView1.Columns[0].ReadOnly = false;
             dataGridView1.Columns[1].ReadOnly = false;
