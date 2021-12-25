@@ -16,6 +16,7 @@ namespace WindowsFormsApp1
     {
         public static string ID_PC = "0";
         public static string ComboId = "0";
+        public  string Avtosalon = "0";
         private const string host = "caseum.ru";
         private const string port = "33333";
         private const string database = "st_2_21_19";

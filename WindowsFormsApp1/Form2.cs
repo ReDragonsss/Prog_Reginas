@@ -18,14 +18,14 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+        public string avtosalon = "0";
         public bool InsertComp(string namepc,string window, string namecp, string operativmemory, string kodpc)
         {
             bool result = false;
             int InsertCount = 0;
-            if (comboBox1.SelectedIndex==0)
-            {
+                Ohelp();
                 conn.Open();
-                string sql = $"INSERT INTO Comp1 (name_pc, windows, name_cp, operativ_memory, kod_pc) VALUES ('{namepc}', '{window}', '{namecp}', '{operativmemory}', '{kodpc}')";
+                string sql = $"INSERT INTO {avtosalon} (name_pc, windows, name_cp, operativ_memory, kod_pc) VALUES ('{namepc}', '{window}', '{namecp}', '{operativmemory}', '{kodpc}')";
                 try
                 {
                     MySqlCommand command = new MySqlCommand(sql, conn);
@@ -45,247 +45,6 @@ namespace WindowsFormsApp1
                         result = true;
                     }
                 }
-            }
-            else if (comboBox1.SelectedIndex==1)
-            {
-                conn.Open();
-                string sql = $"INSERT INTO Comp2 (name_pc, windows, name_cp, operativ_memory, kod_pc) VALUES ('{namepc}', '{window}', '{namecp}', '{operativmemory}', '{kodpc}')";
-                try
-                {
-                    MySqlCommand command = new MySqlCommand(sql, conn);
-                    InsertCount = command.ExecuteNonQuery();
-                }
-                catch
-                {
-                    //Если возникла ошибка, то запрос не вставит ни одной строки
-                    InsertCount = 0;
-                }
-                finally
-                {
-                    conn.Close();
-                    //Ессли количество вставленных строк было не 0, то есть вставлена хотя бы 1 строка
-                    if (InsertCount !=0)
-                    {
-                        result = true;
-                    }
-                }
-            }
-            else if (comboBox1.SelectedIndex==2)
-            {
-                conn.Open();
-                string sql = $"INSERT INTO Comp3 (name_pc, windows, name_cp, operativ_memory, kod_pc) VALUES ('{namepc}', '{window}', '{namecp}', '{operativmemory}', '{kodpc}')";
-                try
-                {
-                    MySqlCommand command = new MySqlCommand(sql, conn);
-                    InsertCount = command.ExecuteNonQuery();
-                }
-                catch
-                {
-                    //Если возникла ошибка, то запрос не вставит ни одной строки
-                    InsertCount = 0;
-                }
-                finally
-                {
-                    conn.Close();
-                    //Ессли количество вставленных строк было не 0, то есть вставлена хотя бы 1 строка
-                    if (InsertCount !=0)
-                    {
-                        result = true;
-                    }
-                }
-            }
-            else if (comboBox1.SelectedIndex==3)
-            {
-                conn.Open();
-                string sql = $"INSERT INTO Comp4 (name_pc, windows, name_cp, operativ_memory, kod_pc) VALUES ('{namepc}', '{window}', '{namecp}', '{operativmemory}', '{kodpc}')";
-                try
-                {
-                    MySqlCommand command = new MySqlCommand(sql, conn);
-                    InsertCount = command.ExecuteNonQuery();
-                }
-                catch
-                {
-                    //Если возникла ошибка, то запрос не вставит ни одной строки
-                    InsertCount = 0;
-                }
-                finally
-                {
-                    conn.Close();
-                    //Ессли количество вставленных строк было не 0, то есть вставлена хотя бы 1 строка
-                    if (InsertCount !=0)
-                    {
-                        result = true;
-                    }
-                }
-            }
-            else if (comboBox1.SelectedIndex==4)
-            {
-                conn.Open();
-                string sql = $"INSERT INTO Comp5 (name_pc, windows, name_cp, operativ_memory, kod_pc) VALUES ('{namepc}', '{window}', '{namecp}', '{operativmemory}', '{kodpc}')";
-                try
-                {
-                    MySqlCommand command = new MySqlCommand(sql, conn);
-                    InsertCount = command.ExecuteNonQuery();
-                }
-                catch
-                {
-                    //Если возникла ошибка, то запрос не вставит ни одной строки
-                    InsertCount = 0;
-                }
-                finally
-                {
-                    conn.Close();
-                    //Ессли количество вставленных строк было не 0, то есть вставлена хотя бы 1 строка
-                    if (InsertCount !=0)
-                    {
-                        result = true;
-                    }
-                }
-            }
-            else if (comboBox1.SelectedIndex==5)
-            {
-                conn.Open();
-                string sql = $"INSERT INTO Comp6 (name_pc, windows, name_cp, operativ_memory, kod_pc) VALUES ('{namepc}', '{window}', '{namecp}', '{operativmemory}', '{kodpc}')";
-                try
-                {
-                    MySqlCommand command = new MySqlCommand(sql, conn);
-                    InsertCount = command.ExecuteNonQuery();
-                }
-                catch
-                {
-                    //Если возникла ошибка, то запрос не вставит ни одной строки
-                    InsertCount = 0;
-                }
-                finally
-                {
-                    conn.Close();
-                    //Ессли количество вставленных строк было не 0, то есть вставлена хотя бы 1 строка
-                    if (InsertCount !=0)
-                    {
-                        result = true;
-                    }
-                }
-            }
-            else if (comboBox1.SelectedIndex==6)
-            {
-                conn.Open();
-                string sql = $"INSERT INTO Comp7 (name_pc, windows, name_cp, operativ_memory, kod_pc) VALUES ('{namepc}', '{window}', '{namecp}', '{operativmemory}', '{kodpc}')";
-                try
-                {
-                    MySqlCommand command = new MySqlCommand(sql, conn);
-                    InsertCount = command.ExecuteNonQuery();
-                }
-                catch
-                {
-                    //Если возникла ошибка, то запрос не вставит ни одной строки
-                    InsertCount = 0;
-                }
-                finally
-                {
-                    conn.Close();
-                    //Ессли количество вставленных строк было не 0, то есть вставлена хотя бы 1 строка
-                    if (InsertCount !=0)
-                    {
-                        result = true;
-                    }
-                }
-            }
-            else if (comboBox1.SelectedIndex==7)
-            {
-                conn.Open();
-                string sql = $"INSERT INTO Comp8 (name_pc, windows, name_cp, operativ_memory, kod_pc) VALUES ('{namepc}', '{window}', '{namecp}', '{operativmemory}', '{kodpc}')";
-                try
-                {
-                    MySqlCommand command = new MySqlCommand(sql, conn);
-                    InsertCount = command.ExecuteNonQuery();
-                }
-                catch
-                {
-                    //Если возникла ошибка, то запрос не вставит ни одной строки
-                    InsertCount = 0;
-                }
-                finally
-                {
-                    conn.Close();
-                    //Ессли количество вставленных строк было не 0, то есть вставлена хотя бы 1 строка
-                    if (InsertCount !=0)
-                    {
-                        result = true;
-                    }
-                }
-            }
-            else if (comboBox1.SelectedIndex==8)
-            {
-                conn.Open();
-                string sql = $"INSERT INTO Comp9 (name_pc, windows, name_cp, operativ_memory, kod_pc) VALUES ('{namepc}', '{window}', '{namecp}', '{operativmemory}', '{kodpc}')"; 
-                try
-                {
-                    MySqlCommand command = new MySqlCommand(sql, conn);
-                    InsertCount = command.ExecuteNonQuery();
-                }
-                catch
-                {
-                    //Если возникла ошибка, то запрос не вставит ни одной строки
-                    InsertCount = 0;
-                }
-                finally
-                {
-                    conn.Close();
-                    //Ессли количество вставленных строк было не 0, то есть вставлена хотя бы 1 строка
-                    if (InsertCount !=0)
-                    {
-                        result = true;
-                    }
-                }
-            }
-            else if (comboBox1.SelectedIndex==9)
-            {
-                conn.Open();
-                string sql = $"INSERT INTO Comp10 (name_pc, windows, name_cp, operativ_memory, kod_pc) VALUES ('{namepc}', '{window}', '{namecp}', '{operativmemory}', '{kodpc}')";
-                try
-                {
-                    MySqlCommand command = new MySqlCommand(sql, conn);
-                    InsertCount = command.ExecuteNonQuery();
-                }
-                catch
-                {
-                    //Если возникла ошибка, то запрос не вставит ни одной строки
-                    InsertCount = 0;
-                }
-                finally
-                {
-                    conn.Close();
-                    //Ессли количество вставленных строк было не 0, то есть вставлена хотя бы 1 строка
-                    if (InsertCount !=0)
-                    {
-                        result = true;
-                    }
-                }
-            }
-            else if (comboBox1.SelectedIndex==10)
-            {
-                conn.Open();
-                string sql = $"INSERT INTO Comp11 (name_pc, windows, name_cp, operativ_memory, kod_pc) VALUES ('{namepc}', '{window}', '{namecp}', '{operativmemory}', '{kodpc}')";
-                try
-                {
-                    MySqlCommand command = new MySqlCommand(sql, conn);
-                    InsertCount = command.ExecuteNonQuery();
-                }
-                catch
-                {
-                    //Если возникла ошибка, то запрос не вставит ни одной строки
-                    InsertCount = 0;
-                }
-                finally
-                {
-                    conn.Close();
-                    //Ессли количество вставленных строк было не 0, то есть вставлена хотя бы 1 строка
-                    if (InsertCount !=0)
-                    {
-                        result = true;
-                    }
-                }
-            }
             return result;
         }
         public void GetListComp(ListBox lb)
@@ -385,6 +144,53 @@ namespace WindowsFormsApp1
                     MessageBox.Show("Произошла ошибка"+ osh);
                     conn.Close();
                 }
+            }
+        }
+        public void Ohelp()
+        {
+            if (ControlData.ComboId=="Changan")
+            {
+                avtosalon = "Comp1";
+            }
+            else if (ControlData.ComboId=="Kia")
+            {
+                avtosalon = "Comp2";
+            }
+            else if (ControlData.ComboId=="Naval")
+            {
+                avtosalon = "Comp3";
+            }
+            else if (ControlData.ComboId=="Shkoda")
+            {
+                avtosalon = "Comp4";
+            }
+            else if (ControlData.ComboId=="Nissan")
+            {
+                avtosalon = "Comp5";
+            }
+            else if (ControlData.ComboId=="Mitsubishi")
+            {
+                avtosalon = "Comp6";
+            }
+            else if (ControlData.ComboId=="Subaru")
+            {
+                avtosalon = "Comp7";
+            }
+            else if (ControlData.ComboId=="Geely")
+            {
+                avtosalon = "Comp8";
+            }
+            else if (ControlData.ComboId=="Peugeot")
+            {
+                avtosalon = "Comp9";
+            }
+            else if (ControlData.ComboId=="Opel")
+            {
+                avtosalon = "Comp10";
+            }
+            else if (ControlData.ComboId=="Trade-in")
+            {
+                avtosalon = "Comp11";
             }
         }
     }
