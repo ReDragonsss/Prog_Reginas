@@ -196,32 +196,3 @@ namespace WindowsFormsApp1
     }
 }
 
-//String str;
-//SqlConnection conn = new SqlConnection ("server=caseum.ru;port=33333;user=st_2_21_19;database=st_2_21_19;password=30518003");
-//CreateWorld = "CREATE DATABASE {perem}" +
-// "(NAME = MyDatabase_Data, " +
-// "FILENAME = 'C:\\MyDatabaseData.mdf', " +
-// "SIZE = 2MB, MAXSIZE = 10MB, FILEGROWTH = 10%)" +
-// "LOG ON (NAME = MyDatabase_Log, " +
-// "FILENAME = 'C:\\MyDatabaseLog.ldf', " +
-// "SIZE = 1MB, " +
-// "MAXSIZE = 5MB, " +
-// "FILEGROWTH = 10%)";
-//SqlCommand Command = new SqlCommand(CreateWorld, conn);
-//try
-//{
-//    conn.Open();
-//    Command.ExecuteNonQuery();
-//    MessageBox.Show("Оно возможно работает");
-//}
-//catch (Exception osh)
-//{
-//    MessageBox.Show($"ну а как иначе: {osh}");
-//}
-//finally
-//{
-//    if (conn.State == ConnectionState.Open)
-//    {
-//      conn.Close();
-//    }
-//}
