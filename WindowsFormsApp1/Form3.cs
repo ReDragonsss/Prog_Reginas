@@ -26,7 +26,7 @@ namespace WindowsFormsApp1
         {
             host=textBox1.Text;
             port=textBox2.Text;
-            database=textBox3.Text;
+            database =textBox3.Text;
             username=textBox4.Text;
             password=textBox5.Text;
             ControlData.GetDBConnection();
@@ -39,21 +39,7 @@ namespace WindowsFormsApp1
             database=textBox3.Text;
             username=textBox4.Text;
             password=textBox5.Text;
-            string connString = $"server={host};port={port};user={username};database={database};password={password};";
-            MySqlConnection conn = new MySqlConnection(connString);
-            {
-                try
-                {
-                    conn.Open();
-                    MessageBox.Show("База данных работает стабильно");
-                    conn.Close();
-                }
-                catch (Exception osh)
-                {
-                    MessageBox.Show("Произошла ошибка"+ osh);
-                    conn.Close();
-                }
-            }
+            ControlData.GetDBConnection();
         }
     }
 }
