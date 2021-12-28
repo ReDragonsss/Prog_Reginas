@@ -13,6 +13,7 @@ namespace WindowsFormsApp1
 {
     public partial class Form3 : Form
     {
+        // здесь должно происходить выбор своего подключения..
         public Form3()
         {
             InitializeComponent();
@@ -41,5 +42,6 @@ namespace WindowsFormsApp1
             password=textBox5.Text;
             ControlData.GetDBConnection();
         }
+        // ..оно даже почти готово просто надо изменить в ConDat параметры подключения
     }
 }
