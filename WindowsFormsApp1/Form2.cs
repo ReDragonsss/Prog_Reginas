@@ -148,47 +148,47 @@ namespace WindowsFormsApp1
         }
         public void Ohelp()
         {
-            if (ControlData.ComboId=="Changan")
+            if (comboBox1.SelectedIndex == 0)
             {
                 avtosalon = "Comp1";
             }
-            else if (ControlData.ComboId=="Kia")
+            else if (comboBox1.SelectedIndex == 1)
             {
                 avtosalon = "Comp2";
             }
-            else if (ControlData.ComboId=="Naval")
+            else if (comboBox1.SelectedIndex == 2)
             {
                 avtosalon = "Comp3";
             }
-            else if (ControlData.ComboId=="Shkoda")
+            else if (comboBox1.SelectedIndex == 3)
             {
                 avtosalon = "Comp4";
             }
-            else if (ControlData.ComboId=="Nissan")
+            else if (comboBox1.SelectedIndex == 4)
             {
                 avtosalon = "Comp5";
             }
-            else if (ControlData.ComboId=="Mitsubishi")
+            else if (comboBox1.SelectedIndex == 5)
             {
                 avtosalon = "Comp6";
             }
-            else if (ControlData.ComboId=="Subaru")
+            else if (comboBox1.SelectedIndex == 6)
             {
                 avtosalon = "Comp7";
             }
-            else if (ControlData.ComboId=="Geely")
+            else if (comboBox1.SelectedIndex == 7)
             {
                 avtosalon = "Comp8";
             }
-            else if (ControlData.ComboId=="Peugeot")
+            else if (comboBox1.SelectedIndex == 8)
             {
                 avtosalon = "Comp9";
             }
-            else if (ControlData.ComboId=="Opel")
+            else if (comboBox1.SelectedIndex == 9)
             {
                 avtosalon = "Comp10";
             }
-            else if (ControlData.ComboId=="Trade-in")
+            else if (comboBox1.SelectedIndex == 10)
             {
                 avtosalon = "Comp11";
             }
