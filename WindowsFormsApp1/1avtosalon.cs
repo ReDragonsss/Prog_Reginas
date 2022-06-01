@@ -32,8 +32,8 @@ namespace WindowsFormsApp1
         string id_selected_rows = "0";
         private void _1avtosalon_Load(object sender, EventArgs e)
         {
-            string connStr = "server=caseum.ru;port=33333;user=st_2_21_19;database=st_2_21_19;password=30518003";
-            conn=new MySqlConnection(connStr);
+            string connStr = "server=chuc.caseum.ru;port=33333;user=st_2_19_21;database=is_2_19_st21_KURS;password=70964010";
+            conn =new MySqlConnection(connStr);
             GetListUsers();
             //Видимость полей в гриде
             dataGridView1.Columns[0].Visible = true;
@@ -212,6 +212,11 @@ namespace WindowsFormsApp1
             {
                 avtosalon = "Comp11";
             }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

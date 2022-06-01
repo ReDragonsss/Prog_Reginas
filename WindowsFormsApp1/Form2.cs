@@ -69,7 +69,7 @@ namespace WindowsFormsApp1
         MySqlConnection conn;
         private void Form2_Load(object sender, EventArgs e)
         {
-            string connStr = "server=caseum.ru;port=33333;user=st_2_21_19;database=st_2_21_19;password=30518003";
+            string connStr = "server=chuc.caseum.ru;port=33333;user=st_2_19_21;database=is_2_19_st21_KURS;password=70964010";
             conn=new MySqlConnection(connStr);
             GetListComp(listBox1);
         }
