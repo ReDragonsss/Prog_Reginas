@@ -212,4 +212,19 @@ namespace WindowsFormsApp1
     }
 }
 
+////Открытие БД Inventorizacia в excel
+//Excel.Application exApp = new Excel.Application(); // предположительно открытие Exel
+//exApp.Workbooks.Add(); // предположительно это создание файла в Exel
+//Excel.Worksheet wsh = (Excel.Worksheet)exApp.ActiveSheet; // может быть создание листа? 
+//int j, i; // переменные
+//for (i = 0; i <= dataGridView2.RowCount - 2; i++) // начало сбора данных из датагрида
+//{
+//    for (j = 0; j < dataGridView2.ColumnCount - 1; j++)
+//    {
+//        wsh.Cells[i + 1, j + 1] = dataGridView2[j, i].Value.ToString();
+//    }  // конец сбора данных из датагрида
+
+//}
+//exApp.Visible = true;
+
 
