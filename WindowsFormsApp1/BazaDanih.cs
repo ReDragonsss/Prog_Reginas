@@ -211,7 +211,7 @@ namespace WindowsFormsApp1
         }
     }
 }
-
+//--------------------------------------------------------------------------------------\\
 ////Открытие БД Inventorizacia в excel
 //Excel.Application exApp = new Excel.Application(); // предположительно открытие Exel
 //exApp.Workbooks.Add(); // предположительно это создание файла в Exel
@@ -226,5 +226,6 @@ namespace WindowsFormsApp1
 
 //}
 //exApp.Visible = true;
+//--------------------------------------------------------------------------------------\\
 
 
