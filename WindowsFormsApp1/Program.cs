@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    internal static class Program
+    internal class Program
     {
         /// <summary>
         /// The main entry point for the application.
@@ -17,6 +17,13 @@ namespace WindowsFormsApp1
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new main());
+        }
+        public static class Auth// данные авторизации
+        {
+            public static bool auth = false;//Статичное поле, которое хранит значение статуса авторизации
+            public static string auth_id = null;//Статичное поле, которое хранит значения ID пользователя
+            public static string auth_login = null;//Статичное поле, которое хранит значения ФИО пользователя
+            public static int auth_role = 0;//Статичное поле, которое хранит количество привелегий пользователя
         }
     }
 }

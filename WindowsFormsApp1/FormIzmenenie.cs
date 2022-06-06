@@ -12,11 +12,11 @@ using MySql.Data.MySqlClient;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form1 : Form
+    public partial class FormIzmenenie : Form
     {
         MySqlConnection conn;
         public string avtosalon = "0";
-        public Form1()
+        public FormIzmenenie()
         {
             InitializeComponent();
         }

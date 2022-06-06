@@ -53,6 +53,15 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data">
       <HintPath>..\..\..\..\..\Desktop\MySql.Data.dll</HintPath>
     </Reference>
@@ -69,24 +78,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="1avtosalon.cs">
+    <Compile Include="Autoriz.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="1avtosalon.Designer.cs">
-      <DependentUpon>1avtosalon.cs</DependentUpon>
+    <Compile Include="Autoriz.Designer.cs">
+      <DependentUpon>Autoriz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BazaDanih.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BazaDanih.Designer.cs">
+      <DependentUpon>BazaDanih.cs</DependentUpon>
     </Compile>
     <Compile Include="ConDat.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="DobavClient.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="DobavClient.Designer.cs">
+      <DependentUpon>DobavClient.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form3.cs">
+    <Compile Include="test.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <Compile Include="test.Designer.cs">
+      <DependentUpon>test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormIzmenenie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIzmenenie.Designer.cs">
+      <DependentUpon>FormIzmenenie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IzmenConnect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IzmenConnect.Designer.cs">
+      <DependentUpon>IzmenConnect.cs</DependentUpon>
     </Compile>
     <Compile Include="main.cs">
       <SubType>Form</SubType>
@@ -94,11 +121,11 @@
     <Compile Include="main.Designer.cs">
       <DependentUpon>main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="DobavAuto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="DobavAuto.Designer.cs">
+      <DependentUpon>DobavAuto.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -108,20 +135,26 @@
     <Compile Include="TechHelp.Designer.cs">
       <DependentUpon>TechHelp.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="1avtosalon.resx">
-      <DependentUpon>1avtosalon.cs</DependentUpon>
+    <EmbeddedResource Include="Autoriz.resx">
+      <DependentUpon>Autoriz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BazaDanih.resx">
+      <DependentUpon>BazaDanih.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConDat.resx">
       <DependentUpon>ConDat.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="DobavClient.resx">
+      <DependentUpon>DobavClient.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="FormIzmenenie.resx">
+      <DependentUpon>FormIzmenenie.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <EmbeddedResource Include="DobavAuto.resx">
+      <DependentUpon>DobavAuto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IzmenConnect.resx">
+      <DependentUpon>IzmenConnect.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="main.resx">
       <DependentUpon>main.cs</DependentUpon>
@@ -139,6 +172,10 @@
     <EmbeddedResource Include="TechHelp.resx">
       <DependentUpon>TechHelp.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="test.resx">
+      <DependentUpon>test.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -186,7 +223,8 @@
     <None Include="Resources\Безымянный1.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="MySql.Data.dll" />
+    <Content Include="MySqlDll\MySql.Data.dll" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

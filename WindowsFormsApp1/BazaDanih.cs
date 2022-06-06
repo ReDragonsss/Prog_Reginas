@@ -23,9 +23,6 @@ namespace WindowsFormsApp1
         private MySqlDataAdapter MyDA = new MySqlDataAdapter();
         //Объявление BindingSource, основная его задача, это обеспечить унифицированный доступ к источнику данных.
         private BindingSource bSource = new BindingSource();
-        //DataSet - расположенное в оперативной памяти представление данных, обеспечивающее согласованную реляционную программную 
-        //модель независимо от источника данных.DataSet представляет полный набор данных, включая таблицы, содержащие, упорядочивающие 
-        //Представляет одну таблицу данных в памяти.
         private DataTable table = new DataTable();
         //Переменная для ID записи в БД, выбранной в гриде. Пока она не содердит значения, лучше его инициализировать с 0
         //что бы в БД не отправлялся null
@@ -153,7 +150,7 @@ namespace WindowsFormsApp1
         {
             ControlData.ComboId=toolStripComboBox1.Text;
             ControlData.ID_PC = id_selected_rows;
-            Form1 form1 = new Form1();
+            FormIzmenenie form1 = new FormIzmenenie();
             form1.ShowDialog();
             reload_list();
         }
@@ -161,62 +158,56 @@ namespace WindowsFormsApp1
         {
             ControlData.ComboId=toolStripComboBox1.Text;
             ControlData.ID_PC = id_selected_rows;
-            Form1 form1 = new Form1();
+            FormIzmenenie form1 = new FormIzmenenie();
             form1.ShowDialog();
             reload_list();
         }
         public void Ohelp()
         {
-
-            if (toolStripComboBox1.SelectedIndex == 0)
+            switch (id_auto)
             {
+                case "0":
                 avtosalon = "Comp1";
-            }
-            else if (toolStripComboBox1.SelectedIndex == 1)
-            {
-                avtosalon = "Comp2";
-            }
-            else if (toolStripComboBox1.SelectedIndex == 2)
-            {
-                avtosalon = "Comp3";
-            }
-            else if (toolStripComboBox1.SelectedIndex == 3)
-            {
-                avtosalon = "Comp4";
-            }
-            else if (toolStripComboBox1.SelectedIndex == 4)
-            {
-                avtosalon = "Comp5";
-            }
-            else if (toolStripComboBox1.SelectedIndex == 5)
-            {
-                avtosalon = "Comp6";
-            }
-            else if (toolStripComboBox1.SelectedIndex == 6)
-            {
-                avtosalon = "Comp7";
-            }
-            else if (toolStripComboBox1.SelectedIndex == 7)
-            {
-                avtosalon = "Comp8";
-            }
-            else if (toolStripComboBox1.SelectedIndex == 8)
-            {
-                avtosalon = "Comp9";
-            }
-            else if (toolStripComboBox1.SelectedIndex == 9)
-            {
-                avtosalon = "Comp10";
-            }
-            else if (toolStripComboBox1.SelectedIndex == 10)
-            {
-                avtosalon = "Comp11";
+                break;
+                case "1":
+                    avtosalon = "Comp2";
+                    break;
+                case "2":
+                    avtosalon = "Comp3";
+                    break;
+                case "3":
+                    avtosalon = "Comp4";
+                    break;
+                case "4":
+                    avtosalon = "Comp5";
+                    break;
+                case "5":
+                    avtosalon = "Comp6";
+                    break;
+                case "6":
+                    avtosalon = "Comp7";
+                    break;
+                case "7":
+                    avtosalon = "Comp8";
+                    break;
+                case "8":
+                    avtosalon = "Comp9";
+                    break;
+                case "9":
+                    avtosalon = "Comp10";
+                    break;
+                case "10":
+                    avtosalon = "Comp11";
+                    break;
             }
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        public string id_auto;// переменная для хранения номера выбранного столбца в комбобоксе
+        public void comboBox1_SelectedIndexChanged(object sender, EventArgs e) // метод для получения номера выбранного столбца в комбобоксе
         {
-
+            int Test;
+            Test = toolStripComboBox1.SelectedIndex;
+            id_auto = Convert.ToString(Test);
+            // напрямую не могу вытащить код не позвoляет.
         }
     }
 }

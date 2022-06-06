@@ -24,7 +24,7 @@ namespace WindowsFormsApp1
 
         private void button5_Click(object sender, EventArgs e)// Запрос 
         {
-            Form2 form2 = new Form2();
+            DobavAuto form2 = new DobavAuto();
             form2.Show();
         }
 
@@ -38,11 +38,10 @@ namespace WindowsFormsApp1
         {
 
         }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
-            Form3 form3 = new Form3();
-            form3.Show();
+            test test = new test();
+            test.Show();
         }
     }
 }

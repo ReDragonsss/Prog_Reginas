@@ -11,10 +11,10 @@ using MySql.Data.MySqlClient;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form3 : Form
+    public partial class IzmenConnect : Form
     {
-        // здесь должно происходить выбор своего подключения..
-        public Form3()
+        // здесь должен происходить выбор своего подключения..
+        public IzmenConnect()
         {
             InitializeComponent();
         }
@@ -30,7 +30,7 @@ namespace WindowsFormsApp1
             database =textBox3.Text;
             username=textBox4.Text;
             password=textBox5.Text;
-            ControlData.GetDBConnection();
+           // ControlData.conn();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -40,7 +40,7 @@ namespace WindowsFormsApp1
             database=textBox3.Text;
             username=textBox4.Text;
             password=textBox5.Text;
-            ControlData.GetDBConnection();
+           // ControlData.conn();
         }
         // ..оно даже почти готово просто надо изменить в ConDat параметры подключения
     }
