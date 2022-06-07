@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using ConntrolBDHelp;
+
 
 
 namespace WindowsFormsApp1
@@ -26,8 +28,8 @@ namespace WindowsFormsApp1
             Ohelp();
             conn.Open();
             //Меняет на форме название, с указанием того имени, которого меняется
-            this.Text = $"Меняем пользователя ID: {ControlData.ID_PC}";
-            string SqlSelect = $"SELECT name_pc, windows, name_cp, operativ_memory FROM {avtosalon} WHERE name_pc = '{ControlData.ID_PC}'";
+            this.Text = $"Меняем пользователя ID: {PVHP.ID_PC}";
+            string SqlSelect = $"SELECT name_pc, windows, name_cp, operativ_memory FROM {avtosalon} WHERE name_pc = '{PVHP.ID_PC}'";
             // объект для выполнения SQL-запроса
             MySqlCommand command = new MySqlCommand(SqlSelect, conn);
             // объект для чтения ответа сервера
@@ -47,8 +49,8 @@ namespace WindowsFormsApp1
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            label1.Text=ControlData.ComboId;
-            string connStr = "server=caseum.ru;port=33333;user=st_2_21_19;database=st_2_21_19;password=30518003";
+            label1.Text= PVHP.ComboId;
+            string connStr = "server=chuc.caseum.ru;port=33333;user=st_2_19_21;database=is_2_19_st21_KURS;password=70964010";
             conn = new MySqlConnection(connStr);
             SelectData();
         }
@@ -60,7 +62,7 @@ namespace WindowsFormsApp1
             string opermem = textBox4.Text;
             string avtosalon = null;
                 string sql_update = $"UPDATE '{avtosalon}' SET name_pc='{n_pc}', windows='{wind}', name_cp='{n_cp}', operativ_memory='{opermem}'" +
-           $"WHERE (name_pc='{ControlData.ID_PC}')";
+           $"WHERE (name_pc='{PVHP.ID_PC}')";
                 conn.Open();
                 MySqlCommand command = new MySqlCommand(sql_update, conn);
                 command.ExecuteNonQuery();
@@ -69,49 +71,41 @@ namespace WindowsFormsApp1
         }
         public void Ohelp()
         {
-            if (ControlData.ComboId=="Changan")
+            switch (PVHP.ComboId)
             {
-                avtosalon = "Comp1";
-            }
-            else if (ControlData.ComboId=="Kia")
-            {
-                avtosalon = "Comp2";
-            }
-            else if (ControlData.ComboId=="Naval")
-            {
-                avtosalon = "Comp3";
-            }
-            else if (ControlData.ComboId=="Shkoda")
-            {
-                avtosalon = "Comp4";
-            }
-            else if (ControlData.ComboId=="Nissan")
-            {
-                avtosalon = "Comp5";
-            }
-            else if (ControlData.ComboId=="Mitsubishi")
-            {
-                avtosalon = "Comp6";
-            }
-            else if (ControlData.ComboId=="Subaru")
-            {
-                avtosalon = "Comp7";
-            }
-            else if (ControlData.ComboId=="Geely")
-            {
-                avtosalon = "Comp8";
-            }
-            else if (ControlData.ComboId=="Peugeot")
-            {
-                avtosalon = "Comp9";
-            }
-            else if (ControlData.ComboId=="Opel")
-            {
-                avtosalon = "Comp10";
-            }
-            else if (ControlData.ComboId=="Trade-in")
-            {
-                avtosalon = "Comp11";
+                case "Changan":
+                    avtosalon = "Comp1";
+                    break;
+                case "Kia":
+                    avtosalon = "Comp2";
+                    break;
+                case "Naval":
+                    avtosalon = "Comp3";
+                    break;
+                case "Shkoda":
+                    avtosalon = "Comp4";
+                    break;
+                case "Nissan":
+                    avtosalon = "Comp5";
+                    break;
+                case "Mitsubishi":
+                    avtosalon = "Comp6";
+                    break;
+                case "Subaru":
+                    avtosalon = "Comp7";
+                    break;
+                case "Geely":
+                    avtosalon = "Comp8";
+                    break;
+                case "Peugeot":
+                    avtosalon = "Comp9";
+                    break;
+                case "Opel":
+                    avtosalon = "Comp10";
+                    break;
+                case "Trade-in":
+                    avtosalon = "Comp11";
+                    break;
             }
         }
     }

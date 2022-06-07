@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using static WindowsFormsApp1.Program;
+using ConntrolBDHelp;
 
 namespace WindowsFormsApp1
 {
@@ -27,9 +28,9 @@ namespace WindowsFormsApp1
             }
             public void GetUserInfo(string login)// метод для получение информации о данных сотрудника который залогинился 
             {
-                ControlData.conn.Open();
+                Connect.conn.Open();
                 string sql = $"SELECT * FROM Auto WHERE login='{login}'";
-                MySqlCommand command = new MySqlCommand(sql, ControlData.conn);
+                MySqlCommand command = new MySqlCommand(sql, Connect.conn);
                 MySqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
@@ -38,7 +39,7 @@ namespace WindowsFormsApp1
                     Auth.auth_role = Convert.ToInt32(reader[3].ToString());
                 }
                 reader.Close();
-                ControlData.conn.Close();
+                Connect.conn.Close();
             }
             public Autoriz()
             {
@@ -52,17 +53,17 @@ namespace WindowsFormsApp1
         private void metroButton1_Click(object sender, EventArgs e)
         {
             string sql = "SELECT * FROM Auto WHERE login = @un and password= @up";
-            ControlData.conn.Open();
+            Connect.conn.Open();
             DataTable table = new DataTable();
             MySqlDataAdapter adapter = new MySqlDataAdapter();
-            MySqlCommand command = new MySqlCommand(sql, ControlData.conn);
+            MySqlCommand command = new MySqlCommand(sql, Connect.conn);
             command.Parameters.Add("@un", MySqlDbType.VarChar, 25);
             command.Parameters.Add("@up", MySqlDbType.VarChar, 25);
             command.Parameters["@un"].Value = metroTextBox1.Text;
             command.Parameters["@up"].Value = sha256(metroTextBox2.Text);
             adapter.SelectCommand = command;
             adapter.Fill(table);
-            ControlData.conn.Close();
+            Connect.conn.Close();
             if (table.Rows.Count > 0)
             {
                 Auth.auth = true;

@@ -53,6 +53,9 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ConntrolBDHelp">
+      <HintPath>..\..\..\..\..\Desktop\ConntrolBDHelp.dll</HintPath>
+    </Reference>
     <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
     </Reference>
@@ -78,10 +81,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Autoriz.cs">
+    <Compile Include="BazaDanihM.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Autoriz.Designer.cs">
+    <Compile Include="BazaDanihM.Designer.cs">
+      <DependentUpon>BazaDanihM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewForm\Autoriz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewForm\Autoriz.Designer.cs">
       <DependentUpon>Autoriz.cs</DependentUpon>
     </Compile>
     <Compile Include="BazaDanih.cs">
@@ -90,17 +99,16 @@
     <Compile Include="BazaDanih.Designer.cs">
       <DependentUpon>BazaDanih.cs</DependentUpon>
     </Compile>
-    <Compile Include="ConDat.cs" />
-    <Compile Include="DobavClient.cs">
+    <Compile Include="NewForm\DobavClient.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DobavClient.Designer.cs">
+    <Compile Include="NewForm\DobavClient.Designer.cs">
       <DependentUpon>DobavClient.cs</DependentUpon>
     </Compile>
-    <Compile Include="test.cs">
+    <Compile Include="NewForm\test.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="test.Designer.cs">
+    <Compile Include="NewForm\test.Designer.cs">
       <DependentUpon>test.cs</DependentUpon>
     </Compile>
     <Compile Include="FormIzmenenie.cs">
@@ -135,16 +143,16 @@
     <Compile Include="TechHelp.Designer.cs">
       <DependentUpon>TechHelp.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Autoriz.resx">
+    <EmbeddedResource Include="BazaDanihM.resx">
+      <DependentUpon>BazaDanihM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewForm\Autoriz.resx">
       <DependentUpon>Autoriz.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BazaDanih.resx">
       <DependentUpon>BazaDanih.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ConDat.resx">
-      <DependentUpon>ConDat.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DobavClient.resx">
+    <EmbeddedResource Include="NewForm\DobavClient.resx">
       <DependentUpon>DobavClient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormIzmenenie.resx">
@@ -172,7 +180,7 @@
     <EmbeddedResource Include="TechHelp.resx">
       <DependentUpon>TechHelp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="test.resx">
+    <EmbeddedResource Include="NewForm\test.resx">
       <DependentUpon>test.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />

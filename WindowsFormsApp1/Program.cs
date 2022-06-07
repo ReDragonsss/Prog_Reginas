@@ -26,4 +26,10 @@ namespace WindowsFormsApp1
             public static int auth_role = 0;//Статичное поле, которое хранит количество привелегий пользователя
         }
     }
+    public class PVHP
+    {
+        public static string ID_PC = "0";
+        public string Avtosalon = "0";
+        public static string ComboId = "0";
+    }
 }

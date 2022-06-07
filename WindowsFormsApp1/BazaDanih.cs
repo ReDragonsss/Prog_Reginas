@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using ConntrolBDHelp;
+
 
 namespace WindowsFormsApp1
 {
@@ -82,7 +84,7 @@ namespace WindowsFormsApp1
             id_selected_rows = dataGridView1.Rows[Convert.ToInt32(index_selected_rows)].Cells[0].Value.ToString();
             //Указываем ID выделенной строки в метке
             toolStripLabel2.Text = id_selected_rows;
-            ControlData.ID_PC = id_selected_rows;
+            PVHP.ID_PC = id_selected_rows;
         }
         public void GetListUsers()
         {
@@ -148,16 +150,16 @@ namespace WindowsFormsApp1
         }
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
-            ControlData.ComboId=toolStripComboBox1.Text;
-            ControlData.ID_PC = id_selected_rows;
+            PVHP.ComboId =toolStripComboBox1.Text;
+            PVHP.ID_PC = id_selected_rows;
             FormIzmenenie form1 = new FormIzmenenie();
             form1.ShowDialog();
             reload_list();
         }
         private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            ControlData.ComboId=toolStripComboBox1.Text;
-            ControlData.ID_PC = id_selected_rows;
+            PVHP.ComboId =toolStripComboBox1.Text;
+            PVHP.ID_PC = id_selected_rows;
             FormIzmenenie form1 = new FormIzmenenie();
             form1.ShowDialog();
             reload_list();
@@ -202,12 +204,13 @@ namespace WindowsFormsApp1
             }
         }
         public string id_auto;// переменная для хранения номера выбранного столбца в комбобоксе
-        public void comboBox1_SelectedIndexChanged(object sender, EventArgs e) // метод для получения номера выбранного столбца в комбобоксе
+        private void toolStripComboBox1_SelectedIndexChanged(object sender, EventArgs e)// метод для получения номера выбранного столбца в комбобоксе
         {
             int Test;
             Test = toolStripComboBox1.SelectedIndex;
             id_auto = Convert.ToString(Test);
             // напрямую не могу вытащить код не позвoляет.
+            reload_list();
         }
     }
 }
