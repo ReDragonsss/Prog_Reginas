@@ -8,7 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
-using ConntrolBDHelp;
+using Excel = Microsoft.Office.Interop.Excel;
+
 
 
 namespace WindowsFormsApp1
@@ -211,6 +212,23 @@ namespace WindowsFormsApp1
             id_auto = Convert.ToString(Test);
             // напрямую не могу вытащить код не позвoляет.
             reload_list();
+        }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            //Открытие БД Inventorizacia в excel
+            Excel.Application exApp = new Excel.Application(); // предположительно открытие Exel
+            exApp.Workbooks.Add(); // предположительно это создание файла в Exel
+            Excel.Worksheet wsh = (Excel.Worksheet)exApp.ActiveSheet; // может быть создание листа? 
+            int j, i; // переменные
+            for (i = 0; i <= dataGridView1.RowCount - 2; i++) // начало сбора данных из датагрида
+            {
+                for (j = 0; j < dataGridView1.ColumnCount - 1; j++)
+                {
+                    wsh.Cells[i + 1, j + 1] = dataGridView1[j, i].Value.ToString();
+                }  // конец сбора данных из датагрида
+            }
+            exApp.Visible = true;
         }
     }
 }

@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using static WindowsFormsApp1.Program;
-using ConntrolBDHelp;
 
 namespace WindowsFormsApp1
 {

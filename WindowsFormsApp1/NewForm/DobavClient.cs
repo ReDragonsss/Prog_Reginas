@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace WindowsFormsApp1
 {
@@ -20,6 +21,11 @@ namespace WindowsFormsApp1
         private void DobavClient_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void metroTextBox2_Click(object sender, EventArgs e)
+        {
+            // ограничь до 8 символов
         }
     }
 }
