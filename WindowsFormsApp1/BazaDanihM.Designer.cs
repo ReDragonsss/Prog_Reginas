@@ -46,6 +46,8 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(677, 275);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
+            this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDoubleClick);
             // 
             // metroLabel1
             // 
@@ -53,14 +55,14 @@
             this.metroLabel1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.metroLabel1.Location = new System.Drawing.Point(3, 8);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(212, 19);
+            this.metroLabel1.Size = new System.Drawing.Size(132, 19);
             this.metroLabel1.TabIndex = 1;
-            this.metroLabel1.Text = "Номер выбранного компьютера:";
+            this.metroLabel1.Text = "Номер компьютера:";
             // 
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(209, 8);
+            this.metroLabel2.Location = new System.Drawing.Point(132, 8);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(16, 19);
             this.metroLabel2.TabIndex = 2;
@@ -68,27 +70,30 @@
             // 
             // metroButton1
             // 
-            this.metroButton1.Location = new System.Drawing.Point(448, 10);
+            this.metroButton1.Location = new System.Drawing.Point(488, 10);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(24, 24);
             this.metroButton1.TabIndex = 4;
             this.metroButton1.UseSelectable = true;
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
             // 
             // metroButton2
             // 
-            this.metroButton2.Location = new System.Drawing.Point(485, 10);
+            this.metroButton2.Location = new System.Drawing.Point(525, 10);
             this.metroButton2.Name = "metroButton2";
             this.metroButton2.Size = new System.Drawing.Size(24, 24);
             this.metroButton2.TabIndex = 5;
             this.metroButton2.UseSelectable = true;
+            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
             // 
             // metroButton3
             // 
-            this.metroButton3.Location = new System.Drawing.Point(412, 10);
+            this.metroButton3.Location = new System.Drawing.Point(452, 10);
             this.metroButton3.Name = "metroButton3";
             this.metroButton3.Size = new System.Drawing.Size(24, 24);
             this.metroButton3.TabIndex = 6;
             this.metroButton3.UseSelectable = true;
+            this.metroButton3.Click += new System.EventHandler(this.metroButton3_Click);
             // 
             // metroButton4
             // 
@@ -98,6 +103,7 @@
             this.metroButton4.TabIndex = 7;
             this.metroButton4.Text = "exit";
             this.metroButton4.UseSelectable = true;
+            this.metroButton4.Click += new System.EventHandler(this.metroButton4_Click);
             // 
             // metroComboBox1
             // 
@@ -115,11 +121,12 @@
             "Peugeot",
             "Opel",
             "Trade-in"});
-            this.metroComboBox1.Location = new System.Drawing.Point(231, 8);
+            this.metroComboBox1.Location = new System.Drawing.Point(271, 8);
             this.metroComboBox1.Name = "metroComboBox1";
             this.metroComboBox1.Size = new System.Drawing.Size(158, 29);
             this.metroComboBox1.TabIndex = 8;
             this.metroComboBox1.UseSelectable = true;
+            this.metroComboBox1.SelectedIndexChanged += new System.EventHandler(this.metroComboBox1_SelectedIndexChanged);
             // 
             // BazaDanihM
             // 

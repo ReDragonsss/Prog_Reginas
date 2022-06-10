@@ -85,47 +85,47 @@ namespace WindowsFormsApp1
             {
                 case "0":
                     InsertComp(NamePc, Windows, NameCp, OperativMemory, KodPc);
-                    GetListComp(listBox1); ;
+                    GetListComp(listBox1); 
                     break;
                 case "1":
                     InsertComp(NamePc, Windows, NameCp, OperativMemory, KodPc);
-                    GetListComp(listBox1); ;
+                    GetListComp(listBox1); 
                     break;
                 case "2":
                     InsertComp(NamePc, Windows, NameCp, OperativMemory, KodPc);
-                    GetListComp(listBox1); ;
+                    GetListComp(listBox1); 
                     break;
                 case "3":
                     InsertComp(NamePc, Windows, NameCp, OperativMemory, KodPc);
-                    GetListComp(listBox1); ;
+                    GetListComp(listBox1); 
                     break;
                 case "4":
                     InsertComp(NamePc, Windows, NameCp, OperativMemory, KodPc);
-                    GetListComp(listBox1); ;
+                    GetListComp(listBox1); 
                     break;
                 case "5":
                     InsertComp(NamePc, Windows, NameCp, OperativMemory, KodPc);
-                    GetListComp(listBox1); ;
+                    GetListComp(listBox1); 
                     break;
                 case "6":
                     InsertComp(NamePc, Windows, NameCp, OperativMemory, KodPc);
-                    GetListComp(listBox1); ;
+                    GetListComp(listBox1); 
                     break;
                 case "7":
                     InsertComp(NamePc, Windows, NameCp, OperativMemory, KodPc);
-                    GetListComp(listBox1); ;
+                    GetListComp(listBox1); 
                     break;
                 case "8":
                     InsertComp(NamePc, Windows, NameCp, OperativMemory, KodPc);
-                    GetListComp(listBox1); ;
+                    GetListComp(listBox1); 
                     break;
                 case "9":
                     InsertComp(NamePc, Windows, NameCp, OperativMemory, KodPc);
-                    GetListComp(listBox1); ;
+                    GetListComp(listBox1); 
                     break;
                 case "10":
                     InsertComp(NamePc, Windows, NameCp, OperativMemory, KodPc);
-                    GetListComp(listBox1); ;
+                    GetListComp(listBox1); 
                     break;
                 default: MessageBox.Show($"Что-то пошло не по плану. Возможно не выбран автосервис! Или таблица перестала существовать?");
                     break;

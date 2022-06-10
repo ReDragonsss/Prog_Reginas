@@ -43,5 +43,17 @@ namespace WindowsFormsApp1
             test test = new test();
             test.Show();
         }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            DobavClient dobavClient = new DobavClient();
+            dobavClient.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            BazaDanihM bazaDanihM = new BazaDanihM();
+            bazaDanihM.Show();
+        }
     }
 }

@@ -32,6 +32,7 @@ namespace WindowsFormsApp1
         public static string ID_PC = "0";
         public string Avtosalon = "0";
         public static string ComboId = "0";
+        public static string ID_Uch ="0";
     }
     public class Connect
     {

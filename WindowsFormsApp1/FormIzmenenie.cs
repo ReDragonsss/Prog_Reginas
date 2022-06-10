@@ -14,7 +14,6 @@ namespace WindowsFormsApp1
 {
     public partial class FormIzmenenie : Form
     {
-        MySqlConnection conn;
         public string avtosalon = "0";
         public FormIzmenenie()
         {
@@ -24,12 +23,12 @@ namespace WindowsFormsApp1
         public void SelectData()
         {
             Ohelp();
-            conn.Open();
+            Connect.conn.Open();
             //Меняет на форме название, с указанием того имени, которого меняется
             this.Text = $"Меняем пользователя ID: {PVHP.ID_PC}";
             string SqlSelect = $"SELECT name_pc, windows, name_cp, operativ_memory FROM {avtosalon} WHERE name_pc = '{PVHP.ID_PC}'";
             // объект для выполнения SQL-запроса
-            MySqlCommand command = new MySqlCommand(SqlSelect, conn);
+            MySqlCommand command = new MySqlCommand(SqlSelect, Connect.conn);
             // объект для чтения ответа сервера
             MySqlDataReader reader = command.ExecuteReader();
             // читаем результат
@@ -43,13 +42,11 @@ namespace WindowsFormsApp1
 
             }
             reader.Close();
-            conn.Close();
+            Connect.conn.Close();
         }
         private void Form1_Load(object sender, EventArgs e)
         {
             label1.Text= PVHP.ComboId;
-            string connStr = "server=chuc.caseum.ru;port=33333;user=st_2_19_21;database=is_2_19_st21_KURS;password=70964010";
-            conn = new MySqlConnection(connStr);
             SelectData();
         }
         private void button1_Click(object sender, EventArgs e)
@@ -58,13 +55,12 @@ namespace WindowsFormsApp1
             string wind = textBox2.Text;
             string n_cp = textBox3.Text;
             string opermem = textBox4.Text;
-            string avtosalon = null;
                 string sql_update = $"UPDATE '{avtosalon}' SET name_pc='{n_pc}', windows='{wind}', name_cp='{n_cp}', operativ_memory='{opermem}'" +
            $"WHERE (name_pc='{PVHP.ID_PC}')";
-                conn.Open();
-                MySqlCommand command = new MySqlCommand(sql_update, conn);
+            Connect.conn.Open();
+                MySqlCommand command = new MySqlCommand(sql_update, Connect.conn);
                 command.ExecuteNonQuery();
-                conn.Close();
+            Connect.conn.Close();
                 this.Close();
         }
         public void Ohelp()
