@@ -55,8 +55,7 @@ namespace WindowsFormsApp1
             string wind = textBox2.Text;
             string n_cp = textBox3.Text;
             string opermem = textBox4.Text;
-                string sql_update = $"UPDATE '{avtosalon}' SET name_pc='{n_pc}', windows='{wind}', name_cp='{n_cp}', operativ_memory='{opermem}'" +
-           $"WHERE (name_pc='{PVHP.ID_PC}')";
+                string sql_update = $"UPDATE {avtosalon} SET name_pc='{n_pc}', windows='{wind}', name_cp='{n_cp}', operativ_memory='{opermem}' WHERE name_pc='{PVHP.ID_PC}'";
             Connect.conn.Open();
                 MySqlCommand command = new MySqlCommand(sql_update, Connect.conn);
                 command.ExecuteNonQuery();

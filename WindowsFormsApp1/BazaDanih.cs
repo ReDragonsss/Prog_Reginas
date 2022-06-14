@@ -221,9 +221,9 @@ namespace WindowsFormsApp1
             exApp.Workbooks.Add(); // предположительно это создание файла в Exel
             Excel.Worksheet wsh = (Excel.Worksheet)exApp.ActiveSheet; // может быть создание листа? 
             int j, i; // переменные
-            for (i = 0; i <= dataGridView1.RowCount - 2; i++) // начало сбора данных из датагрида
+            for (i = 0; i <= dataGridView1.RowCount - 1; i++) // начало сбора данных из датагрида
             {
-                for (j = 0; j < dataGridView1.ColumnCount - 1; j++)
+                for (j = 0; j < dataGridView1.ColumnCount - 0; j++)
                 {
                     wsh.Cells[i + 1, j + 1] = dataGridView1[j, i].Value.ToString();
                 }  // конец сбора данных из датагрида

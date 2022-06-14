@@ -80,7 +80,7 @@ namespace WindowsFormsApp1
             id_selected_rows = dataGridView1.Rows[Convert.ToInt32(index_selected_rows)].Cells[0].Value.ToString();
             //Указываем ID выделенной строки в метке
             metroLabel2.Text = id_selected_rows;
-            PVHP.ID_PC = id_selected_rows;
+           // PVHP.ID_PC = id_selected_rows;
         }
         public void GetListUsers()
         {
