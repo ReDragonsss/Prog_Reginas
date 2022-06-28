@@ -86,16 +86,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BazaDanihM.cs">
+    <Compile Include="DobavAutoM.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BazaDanihM.Designer.cs">
+    <Compile Include="DobavAutoM.Designer.cs">
+      <DependentUpon>DobavAutoM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Metro form\BazaDanihM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Metro form\BazaDanihM.Designer.cs">
       <DependentUpon>BazaDanihM.cs</DependentUpon>
     </Compile>
-    <Compile Include="NewForm\Autoriz.cs">
+    <Compile Include="Metro form\mainM.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NewForm\Autoriz.Designer.cs">
+    <Compile Include="Metro form\mainM.Designer.cs">
+      <DependentUpon>mainM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Metro form\Autoriz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Metro form\Autoriz.Designer.cs">
       <DependentUpon>Autoriz.cs</DependentUpon>
     </Compile>
     <Compile Include="BazaDanih.cs">
@@ -104,10 +116,10 @@
     <Compile Include="BazaDanih.Designer.cs">
       <DependentUpon>BazaDanih.cs</DependentUpon>
     </Compile>
-    <Compile Include="NewForm\DobavClient.cs">
+    <Compile Include="Metro form\DobavClient.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NewForm\DobavClient.Designer.cs">
+    <Compile Include="Metro form\DobavClient.Designer.cs">
       <DependentUpon>DobavClient.cs</DependentUpon>
     </Compile>
     <Compile Include="NewForm\test.cs">
@@ -142,16 +154,19 @@
     <Compile Include="TechHelp.Designer.cs">
       <DependentUpon>TechHelp.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="BazaDanihM.resx">
+    <EmbeddedResource Include="DobavAutoM.resx">
+      <DependentUpon>DobavAutoM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Metro form\BazaDanihM.resx">
       <DependentUpon>BazaDanihM.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NewForm\Autoriz.resx">
+    <EmbeddedResource Include="Metro form\Autoriz.resx">
       <DependentUpon>Autoriz.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BazaDanih.resx">
       <DependentUpon>BazaDanih.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NewForm\DobavClient.resx">
+    <EmbeddedResource Include="Metro form\DobavClient.resx">
       <DependentUpon>DobavClient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormIzmenenie.resx">
@@ -162,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="main.resx">
       <DependentUpon>main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Metro form\mainM.resx">
+      <DependentUpon>mainM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
